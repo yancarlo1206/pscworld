@@ -1,0 +1,215 @@
+
+.circle
+{
+    position: relative;
+    margin: 0 auto;
+    border: 5px solid #FBB03B;
+    width: 500px;
+    height: 500px;
+    border-style:dashed;
+    border-radius: 100%;
+    top: 0;
+    left: 0;
+    transition: .5s;
+}
+
+.ico-SVG-user
+{
+    align-items: center;
+    display: flex;
+}
+
+.ico-SVG-user p
+{
+    color: #747474;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.ico-SVG-user p:first-child
+{
+    padding-right: 20px;
+}
+
+.ico-SVG-user p:last-child
+{
+    padding-left: 20px;
+}
+
+.user
+{
+    width: 50px;
+}
+
+.firma
+{
+    width: 70px;
+}
+
+.contenedor-iconosCircle
+{
+    position: relative;
+    padding-bottom: 80px;
+    padding-top: 90px;
+    width: 100%;
+    background-color: #f2f2f2;
+}
+
+.cont-icos-circle
+{
+    position: relative;
+    width: 100%;
+}
+
+.cont-icos-SVG
+{
+    height: 550px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between;
+
+    left: 0; 
+    margin: auto;
+    padding-top: 2em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 750px;
+    z-index: 1;
+}
+
+.sha{ width: 61px;}
+
+.pc
+{
+    width: 80px;
+}
+
+.icos-SVG-1
+{
+    width: 700px; margin: 0 auto;
+    justify-content: space-between;
+    display: flex;
+    background-color: #f2f2f2;
+}
+
+.icos-SVG-2
+{
+    padding: 1em 0;
+    justify-content: space-between;
+    display: flex;
+    background-color: #f2f2f2;
+}
+
+.icos-SVG-bottom
+{
+    padding: 0 10px;
+    background-color: #f2f2f2;
+    margin: 0 auto;
+}
+
+.ico-SVG-nube 
+{
+    text-align: center;
+}
+
+.ico-SVG-nube p
+{
+    color: #747474;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nube
+{
+    width: 85px;
+}
+
+@media (max-width: 800px)
+{
+    .circle
+    {
+        border-radius: 20px;
+        width: 300px;
+    }
+
+    .cont-icos-SVG
+    {
+        width: 80%;
+    }
+
+    .icos-SVG-1
+    {
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px)
+{
+    .circle
+    {
+        border-radius: 20px;
+    }
+
+    .cont-icos-SVG
+    {
+        width: 90%;
+    }
+
+    .icos-SVG-1
+    {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px)
+{
+    .circle
+    {
+        border-radius: 0px;
+        width: 50%;
+        height: 1400px;
+        left: 0;
+        margin: initial;
+        border: 0;
+        border-right: 5px solid #FBB03B;
+        border-style: dashed;
+    }
+
+    
+
+    .icos-SVG-1, .icos-SVG-2
+    {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .ico-SVG-user
+    {
+        text-align: center;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+    
+    .cont-icos-SVG
+    {
+        width: 90%;
+    }
+
+    .icos-SVG-1, .icos-SVG-2
+    {
+        background-color: transparent;
+        width: 100%;
+    }
+
+    .cont-icos-SVG img, .ico-SVG-user p
+    {
+        background-color: #f2f2f2;
+    }
+
+    .ico-SVG-user p:first-child, .ico-SVG-user p:last-child {
+        padding-right: 0;
+    }
+}
