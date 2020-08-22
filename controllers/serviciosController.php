@@ -8,7 +8,7 @@ class serviciosController extends Controller {
     public function index() {
     	$this->_view->titulo = '';
         $this->_view->renderizar('index', '');
-    }
+    }    
 
     public function estampado_tiempo(){
     	$this->_view->titulo = 'Estampado de Tiempo';
