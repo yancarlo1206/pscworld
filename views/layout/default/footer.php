@@ -7,7 +7,7 @@
                         <div class="row">
                             <!--Footer Column-->
                             <div class="footer-column col-lg-3 col-md-12 col-sm-12">
-                                <div class="logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
+                                <div class="logo"><a href="#"><img src="<?php echo BASE_URL; ?>/public/images/logo.png" alt=""></a></div>
                             </div>
 
                             <div class="footer-column col-lg-3 col-md-4 col-sm-12">
