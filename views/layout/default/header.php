@@ -38,7 +38,37 @@
                     <nav class="main-menu navbar-expand-md navbar-light">
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navigation clearfix">
-                                <li class="">
+                                <?php foreach ($_layoutParams['menu'] as $key => $value) { ?>
+                                    <?php $class = ''; ?>
+                                    <?php $current = ''; ?>
+                                    <?php $titulo = $value['titulo']; ?>
+                                    <?php if($_layoutParams['item'] == $value['id']){
+                                        $current = 'current ';
+                                    } ?>
+                                    <?php if(isset($value['submenu'])){ 
+                                        $class='dropdown';
+                                        $titulo = '<span>'.$value['titulo'].'</span>';
+                                    } ?>
+                                    <li class="<?php echo $current.$class; ?>">
+                                        <a href="<?php echo $value['enlace'] ?>"><?php echo $titulo; ?></a>
+                                        <?php if(isset($value['submenu'])){ ?>
+                                            <ul>  
+                                            <?php foreach ($value['submenu'] as $key_sub => $value_sub) { ?>
+                                                <?php $currentSub = ''; ?>
+                                                <?php if($_layoutParams['subItem'] == $value_sub['id']){
+                                                    $currentSub = 'current';
+                                                } ?>
+                                                <li class='<?php echo $currentSub; ?>'>
+                                                    <a href="<?php echo $value_sub['enlace']; ?>">
+                                                        <?php echo $value_sub['titulo']; ?>
+                                                    </a>
+                                                </li>   
+                                            <?php } ?>
+                                            </ul>
+                                        <?php } ?>
+                                    </li>
+                                <?php } ?>
+                                <!-- <li class="">
                                     <a href="index.html">Inicio</a>
                                 </li>
                                 <li class="current dropdown">
@@ -55,7 +85,7 @@
                                 <li><a href="contact.html">Contacto</a></li>
                                 <li class="btn-box">
                                     <a href="login.html">Iniciar sesión</a>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </nav>

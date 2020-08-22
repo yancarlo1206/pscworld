@@ -18,125 +18,77 @@ class View {
     
     public function renderizar($vista, $item = false, $subItem = false) {
         $menu = array();
-        if(Session::get('autenticado')){
+
         $menu[] = array(
                 'id' => 'inicio',
                 'titulo' => 'Inicio',
-                'icono' => '<em class="fa fa-home">&nbsp;</em>',
                 'enlace' => BASE_URL
                 );
+        $menu[] = array(
+                'id' => 'servicios',
+                'titulo' => 'Servicios',
+                'enlace' => BASE_URL . 'servicios/',
+                'submenu' => 
+                    array(
+                        array(
+                            'id' => 'firma_digital',
+                            'titulo' => 'Firma Digital Electronica',
+                            'enlace' => BASE_URL . 'doc2sign/'
+                        ),
+                        array(
+                            'id' => 'estampa_tiempo',
+                            'titulo' => 'Estampa de Tiempo',
+                            'enlace' => BASE_URL . 'estampa_tiempo/'
+                        ),
+                        array(
+                            'id' => 'certificado_ssl',
+                            'titulo' => 'Certificados SSL',
+                            'enlace' => BASE_URL . 'certificado_ssl/'
+                        ),
+                        array(
+                            'id' => 'nom_151',
+                            'titulo' => 'Nom 151',
+                            'enlace' => BASE_URL . 'nom_151/'
+                        )
+                    )
+                );
+        $menu[] = array(
+                'id' => 'doc2sign',
+                'titulo' => 'Doc2sign',
+                'enlace' => BASE_URL . 'doc2sign/'
+                );
+        $menu[] = array(
+                'id' => 'noticias',
+                'titulo' => 'Noticias',
+                'enlace' => BASE_URL . 'noticias/'
+                );
+        $menu[] = array(
+                'id' => 'contacto',
+                'titulo' => 'Contacto',
+                'enlace' => BASE_URL . 'contacto/'
+                );
+        $menu[] = array(
+                'id' => 'login',
+                'titulo' => 'Iniciar Sesion',
+                'enlace' => BASE_URL . 'login/'
+                );
+
+        if(Session::get('autenticado')){
 
         }
         if(Session::accesoView('usuario')){
-            $menu[] = array(
-                    'id' => 'medicamento',
-                    'titulo' => 'Medicamento',
-                    'icono' => '<em class="fa fa-medkit">&nbsp;</em>',
-                    'enlace' => BASE_URL . 'medicamento/'
-                    );
-            $menu[] = array(
-                    'id' => 'dosificacion',
-                    'titulo' => 'Dosificacion',
-                    'icono' => '<em class="fa fa-calendar">&nbsp;</em>',
-                    'enlace' => BASE_URL . 'dosificacion/'
-                    );
-            $menu[] = array(
-                    'id' => 'cliente',
-                    'titulo' => 'Cliente',
-                    'icono' => '<em class="fa fa-user">&nbsp;</em>',
-                    'enlace' => BASE_URL . 'cliente/'
-                    );
-            $menu[] = array(
-                    'id' => 'Clave',
-                    'titulo' => 'Cambiar Clave',
-                    'icono' => '<em class="fa fa-refresh">&nbsp;</em>',
-                    'enlace' => BASE_URL . 'clave/'
-                    );
+            
         }
         if(Session::accesoView('administrador')){
-            $menu[] = array(
-                    'id' => 'usuario',
-                    'titulo' => 'Usuarios',
-                    'icono' => '<em class="fa fa-user">&nbsp;</em>',
-                    'enlace' => BASE_URL . 'usuario/'
-                    );
-            $menu[] = array(
-                    'id' => 'medicamento',
-                    'titulo' => 'Medicamento',
-                    'icono' => '<em class="fa fa-medkit">&nbsp;</em>',
-                    'enlace' => BASE_URL . 'medicamento/'
-                    );
-            $menu[] = array(
-                    'id' => 'recargas',
-                    'titulo' => 'Recargas',
-                    'icono' => '<em class="fa fa-money-bill-alt">&nbsp;</em>',
-                    'enlace' => BASE_URL . 'recargas/'
-                    );
-            $menu[] = array(
-                    'id' => 'formapago',
-                    'titulo' => 'Forma Pago',
-                    'icono' => '<em class="fa fa-hand-holding-usd">&nbsp;</em>',
-                    'enlace' => BASE_URL . 'formapago/'
-                    ); 
-            $menu[] = array(
-                    'id' => 'tarifas',
-                    'titulo' => 'Tarifas',
-                    'icono' => '<em class="fa fa-handshake">&nbsp;</em>',
-                    'enlace' => BASE_URL . 'tarifas/'
-                    );
-            $menu[] = array(
-                    'id' => 'frecuencia',
-                    'titulo' => 'Frecuencia',
-                    'icono' => '<em class="fa fa-calculator">&nbsp;</em>',
-                    'enlace' => BASE_URL . 'frecuencia/'
-                    );
-            $menu[] = array(
-                    'id' => 'tipomedicamento',
-                    'titulo' => 'Tipo Medicamento',
-                    'icono' => '<em class="fa fa-book">&nbsp;</em>',
-                    'enlace' => BASE_URL . 'tipomedicamento/'
-                    ); 
-            $menu[] = array(
-                    'id' => 'laboratorio',
-                    'titulo' => 'Laboratorio',
-                    'icono' => '<em class="fa fa-building">&nbsp;</em>',
-                    'enlace' => BASE_URL . 'laboratorio/'
-                    );
-            $menu[] = array(
-                    'id' => 'presentacion',
-                    'titulo' => 'Presentacion',
-                    'icono' => '<em class="fa fa-bars">&nbsp;</em>',
-                    'enlace' => BASE_URL . 'presentacion/'
-                    );
-            $menu[] = array(
-                    'id' => 'tiposmensaje',
-                    'titulo' => 'Tipo Mensaje',
-                    'icono' => '<em class="fa fa-comments">&nbsp;</em>',
-                    'enlace' => BASE_URL . 'tiposmensaje/'
-                    );
+            
         }
         if(Session::accesoView('consultorio')){
-            $menu[] = array(
-                    'id' => 'campana',
-                    'titulo' => 'Campaña',
-                    'icono' => '<em class="fa fa-window-restore">&nbsp;</em>',
-                    'enlace' => BASE_URL . 'campana/'
-                    );
-            $menu[] = array(
-                    'id' => 'cancelacion',
-                    'titulo' => 'Cancelaciones',
-                    'icono' => '<em class="fa fa-align-justify">&nbsp;</em>',
-                    'enlace' => BASE_URL . 'cancelaciones/'
-                    );
+            
         }
         if(Session::get('autenticado')){
-            $menu[] = array(
-                    'id' => 'cerrarsesion',
-                    'titulo' => 'Cerrar Sesi&oacute;n',
-                    'icono' => '<em class="fa fa-times">&nbsp;</em>',
-                    'enlace' => BASE_URL . 'login/cerrar/'
-                    );  
+             
         }
+
         $js = array();
         if(count($this->_js)){$js = $this->_js;}
         $css = array();
