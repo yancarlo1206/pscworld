@@ -7,12 +7,12 @@ class noticiasController extends Controller {
     
     public function index() {
     	$this->_view->titulo = '';
-        $this->_view->renderizar('index', '');
+        $this->_view->renderizar('index', 'noticias');
     }
 
     public function ver_noticia() {
     	$this->_view->titulo = '';
-        $this->_view->renderizar('ver_noticia', '');
+        $this->_view->renderizar('ver_noticia', 'noticias');
     }
 
 }

@@ -36,19 +36,19 @@ class View {
                             'enlace' => BASE_URL . 'doc2sign/'
                         ),
                         array(
-                            'id' => 'estampa_tiempo',
-                            'titulo' => 'Estampa de Tiempo',
-                            'enlace' => BASE_URL . 'estampa_tiempo/'
+                            'id' => 'estampado_tiempo',
+                            'titulo' => 'Estampado de Tiempo',
+                            'enlace' => BASE_URL . 'servicios/estampado_tiempo/'
                         ),
                         array(
                             'id' => 'certificado_ssl',
                             'titulo' => 'Certificados SSL',
-                            'enlace' => BASE_URL . 'certificado_ssl/'
+                            'enlace' => BASE_URL . 'servicios/certificado_ssl/'
                         ),
                         array(
                             'id' => 'nom_151',
                             'titulo' => 'Nom 151',
-                            'enlace' => BASE_URL . 'nom_151/'
+                            'enlace' => BASE_URL . 'servicios/nom_151/'
                         )
                     )
                 );

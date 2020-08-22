@@ -80,24 +80,36 @@
                     <nav class="main-menu navbar-expand-md navbar-light">
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navigation clearfix">
-                                <li class="current">
-                                    <a href="index.html">Inicio</a>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="servicios.html"><span>Servicios</span></a>
-                                    <ul>
-                                        <li><a href="doc2sign.html">Firma digital electronica</a></li>
-                                        <li><a href="estampadotiempo.html">Estampado de tiempo</a></li>
-                                        <li><a href="certificadosSSL.html">Certificados SSL</a></li>
-                                        <li><a href="nom151.html">NOM-151</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="doc2sign.html">Doc2sign</a></li>
-                                <li><a href="noticias.html">Noticias</a></li>
-                                <li><a href="contact.html">Contacto</a></li>
-                                <li class="btn-box">
-                                    <a href="login.html">Iniciar sesión</a>
-                                </li>
+                                <?php foreach ($_layoutParams['menu'] as $key => $value) { ?>
+                                    <?php $class = ''; ?>
+                                    <?php $current = ''; ?>
+                                    <?php $titulo = $value['titulo']; ?>
+                                    <?php if($_layoutParams['item'] == $value['id']){
+                                        $current = 'current ';
+                                    } ?>
+                                    <?php if(isset($value['submenu'])){ 
+                                        $class='dropdown';
+                                        $titulo = '<span>'.$value['titulo'].'</span>';
+                                    } ?>
+                                    <li class="<?php echo $current.$class; ?>">
+                                        <a href="<?php echo $value['enlace'] ?>"><?php echo $titulo; ?></a>
+                                        <?php if(isset($value['submenu'])){ ?>
+                                            <ul>  
+                                            <?php foreach ($value['submenu'] as $key_sub => $value_sub) { ?>
+                                                <?php $currentSub = ''; ?>
+                                                <?php if($_layoutParams['subItem'] == $value_sub['id']){
+                                                    $currentSub = 'current';
+                                                } ?>
+                                                <li class='<?php echo $currentSub; ?>'>
+                                                    <a href="<?php echo $value_sub['enlace']; ?>">
+                                                        <?php echo $value_sub['titulo']; ?>
+                                                    </a>
+                                                </li>   
+                                            <?php } ?>
+                                            </ul>
+                                        <?php } ?>
+                                    </li>
+                                <?php } ?>
                             </ul>
                         </div>
                     </nav>

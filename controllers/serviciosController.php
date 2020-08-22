@@ -12,17 +12,17 @@ class serviciosController extends Controller {
 
     public function estampado_tiempo(){
     	$this->_view->titulo = 'Estampado de Tiempo';
-        $this->_view->renderizar('estampado_tiempo', 'servicios', 'estampa_tiempo');
+        $this->_view->renderizar('estampado_tiempo', 'servicios', 'estampado_tiempo');
     }
 
     public function certificado_ssl(){
     	$this->_view->titulo = 'Certificado SSL';
-        $this->_view->renderizar('certificado_ssl', '');	
+        $this->_view->renderizar('certificado_ssl', 'servicios', 'certificado_ssl');	
     }
 
     public function nom_151(){
     	$this->_view->titulo = 'Nom 151';
-        $this->_view->renderizar('nom_151', '');	
+        $this->_view->renderizar('nom_151', 'servicios', 'nom_151');
     }
 
 }
