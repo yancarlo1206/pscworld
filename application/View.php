@@ -155,13 +155,13 @@ class View {
         );
         $rutaView = ROOT . 'views' . DS . $this->_controlador . DS . $vista . '.phtml';
         if(is_readable($rutaView)){
-            if($this->_controlador != 'landingpage'){
-            	include_once ROOT . 'views'. DS . 'layout' . DS . DEFAULT_LAYOUT . DS . 'header.php';
+            if($this->_controlador == 'index'){
+            	include_once ROOT . 'views'. DS . 'layout' . DS . DEFAULT_LAYOUT . DS . 'header_principal.php';
+            }else{
+                include_once ROOT . 'views'. DS . 'layout' . DS . DEFAULT_LAYOUT . DS . 'header.php';
             }
             include_once $rutaView;
-            if($this->_controlador != 'landingpage'){
-            	include_once ROOT . 'views'. DS . 'layout' . DS . DEFAULT_LAYOUT . DS . 'footer.php';
-            }
+            include_once ROOT . 'views'. DS . 'layout' . DS . DEFAULT_LAYOUT . DS . 'footer.php';
         } 
         else {
             throw new Exception('Error de vista');
