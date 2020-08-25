@@ -79,8 +79,8 @@
             <div class="call-us">
                 <div class="service-num"><a href="#"><i class="fa fa-phone"></i>+52 55 5339 6600</a></div>
                 <div class="social-link">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/PSC-World-SA-de-CV-104638751341047"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/company/psc-world/?viewAsMember=true"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#"><i class="fab fa-vimeo-v"></i></a>
                     <a href="#"><i class="fab fa-pinterest-p"></i></a>
                 </div>
