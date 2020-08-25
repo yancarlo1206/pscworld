@@ -12,6 +12,7 @@
 
     <link rel="shortcut icon" href="<?php echo BASE_URL; ?>public/images/favicon.png" type="image/x-icon">
     <link rel="icon" href="<?php echo BASE_URL; ?>public/images/favicon.png" type="image/x-icon">
+    <script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
 
     <!-- Responsive -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

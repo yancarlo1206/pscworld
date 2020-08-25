@@ -36,7 +36,8 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="field-label">Contenido Noticia <sup>*</sup></div>
-                                        <textarea name="contenido" cols="30" rows="10"><?php if(isset($this->noticia)) echo $this->noticia->getContenido() ?></textarea>
+                                        <!-- name="contenido" -->
+                                        <textarea  name="editor1" cols="30" rows="10"><?php if(isset($this->noticia)) echo $this->noticia->getContenido() ?></textarea>
                                     </div>                
                                     <?php if(isset($this->noticia)){ ?>
                                         <button class="theme-btn btn-style-four" type="submit">Actualizar</button>       
@@ -82,3 +83,4 @@
         </div>
     </div>
 </section>
+

@@ -56,8 +56,8 @@
                 </div>
                 <div class="top-right">
                     <ul class="social-icon-one">
-                        <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-                        <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
+                        <li><a href="https://www.facebook.com/PSC-World-SA-de-CV-104638751341047"><span class="fab fa-facebook-f"></span></a></li>
+                        <li><a href="https://www.linkedin.com/company/psc-world/?viewAsMember=true"><span class="fab fa-linkedin-in"></span></a></li>
                         <li><a href="#"><span class="fab fa-vimeo-v"></span></a></li>
                         <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
                     </ul>
