@@ -31,7 +31,11 @@
         <!-- Main box -->
         <div class="main-box">
             <div class="menu-box">
-                <div class="logo"><a href="index.html"><img src="<?php echo BASE_URL; ?>public/images/logo-5.png" alt="" title="" ></a></div>
+                <div class="logo">
+                    <a href="<?php echo BASE_URL; ?>">
+                        <img src="<?php echo BASE_URL; ?>public/images/logo-5.png" alt="" title="" >
+                    </a>
+                </div>
 
                 <!--Nav Box-->
                 <div class="nav-outer">
@@ -69,24 +73,6 @@
                                         <?php } ?>
                                     </li>
                                 <?php } ?>
-                                <!-- <li class="">
-                                    <a href="index.html">Inicio</a>
-                                </li>
-                                <li class="current dropdown">
-                                    <a href="servicios.html"><span>Servicios</span></a>
-                                    <ul>
-                                        <li><a href="doc2sign.html">Firma digital electronica</a></li>
-                                        <li class="current"><a href="estampadotiempo.html">Estampado de tiempo</a></li>
-                                        <li><a href="certificadosSSL.html">Certificados SSL</a></li>
-                                        <li><a href="nom151.html">NOM-151</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="doc2sign.html">Doc2sign</a></li>
-                                <li><a href="noticias.html">Noticias</a></li>
-                                <li><a href="contact.html">Contacto</a></li>
-                                <li class="btn-box">
-                                    <a href="login.html">Iniciar sesión</a>
-                                </li> -->
                             </ul>
                         </div>
                     </nav>
@@ -113,7 +99,7 @@
 
         <!-- Mobile Header -->
         <div class="mobile-header">
-            <div class="logo"><a href="index.html"><img src="<?php echo BASE_URL; ?>public/images/logo-5.png" alt="" title="" ></a></div>
+            <div class="logo"><a href="<?php echo BASE_URL; ?>"><img src="<?php echo BASE_URL; ?>public/images/logo-5.png" alt="" title="" ></a></div>
 
             <!--Nav Box-->
             <div class="nav-outer clearfix">
@@ -123,7 +109,7 @@
 
         <!-- Mobile Sticky Header -->
         <div class="mobile-sticky-header">
-            <div class="logo"><a href="index.html"><img src="<?php echo BASE_URL; ?>public/images/logo-5.png" alt="" title="" ></a></div>
+            <div class="logo"><a href="<?php echo BASE_URL; ?>"><img src="<?php echo BASE_URL; ?>public/images/logo-5.png" alt="" title="" ></a></div>
 
             <!--Nav Box-->
             <div class="nav-outer clearfix">
@@ -136,16 +122,11 @@
             <span class="mobile-menu-back-drop"></span>
             <div class="menu-outer">
                 <nav class="menu-box">
-                    <div class="nav-logo"><a href="index.html"><img src="<?php echo BASE_URL; ?>public/images/logo-5.png" alt="" title="" ></a></div><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                    <div class="nav-logo"><a href="<?php echo BASE_URL; ?>"><img src="<?php echo BASE_URL; ?>public/images/logo-5.png" alt="" title="" ></a></div><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
                 </nav>
 
                 <div class="menu-search">
-                    <form method="post" action="blog-checkerboard.html">
-                        <div class="form-group">
-                            <input type="text" class="input" name="search-field" value="" placeholder="Search..." required="">
-                            <button type="submit"><i class="fa fa-search"></i></button>
-                        </div>
-                    </form>
+                    <a href="<?php echo BASE_URL; ?>login">Iniciar sesion</a>
                 </div>
             </div>
         </div><!-- End Mobile Menu -->

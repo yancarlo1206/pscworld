@@ -51,15 +51,15 @@
                             Avenida Patriotismo 48-6, Escandón I Secc, 
                             Miguel Hidalgo, 11800 Ciudad de México, CDMX
                         </li>
-                        <li><a class="abririmg " href=""><i class="fa flaticon-medal"></i>Acreditación</a></li>
+                        <li><a class="abririmg" href=""><i class="fa flaticon-medal"></i>Acreditación</a></li>
+                        <li><a href="<?php echo BASE_URL; ?>login"><i class="fa flaticon-user"></i>Iniciar sesión</a></li>
                     </ul>
                 </div>
                 <div class="top-right">
                     <ul class="social-icon-one">
                         <li><a href="https://www.facebook.com/PSC-World-SA-de-CV-104638751341047"><span class="fab fa-facebook-f"></span></a></li>
                         <li><a href="https://www.linkedin.com/company/psc-world/?viewAsMember=true"><span class="fab fa-linkedin-in"></span></a></li>
-                        <li><a href="#"><span class="fab fa-vimeo-v"></span></a></li>
-                        <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
+                        <li><a href="#"><span class="fab flaticon-twitter"></span></a></li>
                     </ul>
                 </div>
             </div>
@@ -70,8 +70,8 @@
         <div class="main-box">
             <div class="menu-box">
                 <div class="logo">
-                    <a href="index.html" class="main-logo"><img src="<?php echo BASE_URL; ?>public/images/logo.png" alt="" title="" ></a>
-                    <a href="index.html" class="sticky-logo"><img src="<?php echo BASE_URL; ?>public/images/logo-5.png" alt="" title="" ></a>
+                    <a href="<?php echo BASE_URL; ?>" class="main-logo"><img src="<?php echo BASE_URL; ?>public/images/logo.png" alt="" title="" ></a>
+                    <a href="<?php echo BASE_URL; ?>" class="sticky-logo"><img src="<?php echo BASE_URL; ?>public/images/logo-5.png" alt="" title="" ></a>
                 </div>
 
                 <!--Nav Box-->
@@ -124,10 +124,6 @@
                         <a href="tel:525553396600"><h4>+52 55 5339 6600</h4></a>
                     </div>
 
-                    <!-- Search Btn -->
-                    <!-- <div class="search-box">
-                        <button class="search-btn"><i class="fa fa-search"></i></button>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -168,37 +164,10 @@
                 </nav>
 
                 <div class="menu-search">
-                    <form method="post" action="blog-checkerboard.html">
-                        <div class="form-group">
-                            <input type="text" class="input" name="search-field" value="" placeholder="Search..." required="">
-                            <button type="submit"><i class="fa fa-search"></i></button>
-                        </div>
-                    </form>
+                    <a href="<?php echo BASE_URL; ?>login">Iniciar sesion</a>
                 </div>
             </div>
         </div><!-- End Mobile Menu -->
-
-        <!-- Header Search -->
-        <div class="search-popup">
-            <span class="search-back-drop"></span>
-            
-            <div class="search-inner">
-                <div class="auto-container">
-                    <div class="upper-text">
-                        <div class="text">Search for anything.</div>
-                        <button class="close-search"><span class="fa fa-times"></span></button>
-                    </div>
-
-                    <form method="post" action="blog-checkerboard.html">
-                        <div class="form-group">
-                            <input type="search" name="search-field" value="" placeholder="Search..." required="">
-                            <button type="submit"><i class="fa fa-search"></i></button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <!-- End Header Search -->
         
     </header>
     <!--End Main Header -->
