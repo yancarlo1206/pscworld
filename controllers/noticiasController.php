@@ -7,11 +7,13 @@ class noticiasController extends Controller {
     }
     
     public function index() {
+        $this->_view->noticias = $this->_noticia->resultList();
     	$this->_view->titulo = '';
         $this->_view->renderizar('index', 'noticias');
     }
 
-    public function ver_noticia() {
+    public function ver_noticia($noticia=null) {
+        $this->_view->noticia = $this->_noticia->get($noticia);
     	$this->_view->titulo = '';
         $this->_view->renderizar('ver_noticia', 'noticias');
     }
@@ -56,6 +58,16 @@ class noticiasController extends Controller {
         }
         $this->_view->titulo = '';
         $this->_view->renderizar('registrar', 'noticias');
+    }
+
+    public function eliminar($noticia=null){
+        $this->_noticia->get($noticia);
+        try {
+            $this->_noticia->delete();
+        } catch (Exception $e) {
+            
+        }
+        $this->redireccionar('noticias/listar/');
     }
 
 }

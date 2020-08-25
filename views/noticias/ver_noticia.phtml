@@ -8,11 +8,12 @@
                         <div class="news-block">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><img src="<?php echo BASE_URL; ?>/public/images/resource/blog-8.jpg" alt=""></figure>
-                                    <a href="#" class="date"><i class="far fa-calendar"></i> May 9, 2020</a>
+                                    <figure class="image"><img src="<?php echo BASE_URL; ?>/public/images/noticias/<?php echo $this->noticia->getId() ?>.jpg" alt=""></figure>
+                                    <a href="#" class="date"><i class="far fa-calendar"></i> <?php echo $this->noticia->getFecha()->format('d/m/Y') ?></a>
                                 </div>
                                 <div class="lower-content">
-                                    <p>
+                                    <?php echo $this->noticia->getContenido() ?>
+                                    <!-- <p>
                                         El Lorem Ipsum fue concebido como un texto de relleno, formateado de una cierta manera para permitir la presentación de elementos gráficos en documentos, sin necesidad de una copia formal. El uso de Lorem Ipsum permite a los diseñadores reunir los diseños y la forma del contenido antes de que el contenido se haya creado, dando al diseño y al proceso de producción más libertad.
                                     </p>
                                     <p>
@@ -31,7 +32,7 @@
                                     </div>
                                     <p>
                                         El Lorem Ipsum fue reintroducido en la década de 1980 por Aldus Corporation, una empresa que desarrolló Software de Publicación de Escritorio. Su producto más conocido PageMaker viene con gráficos y plantillas de procesamiento de textos previamente instaladas que contienen una versión del lenguaje latín falso.
-                                    </p>
+                                    </p> -->
                                 </div>
                             </div>
                         </div>

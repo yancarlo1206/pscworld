@@ -12,24 +12,28 @@
         <div class="auto-container">
             <!-- Blog Checkerboard -->
             <div class="row">
-
                 <!-- News Block -->
+                <?php foreach ($this->noticias as $key => $value) { ?>
                 <div class="news-block style-two-even">
                     <div class="inner-box">
                         <div class="image-box">
-                            <figure class="image"><a href="<?php echo BASE_URL; ?>noticias/ver_noticia"><img src="<?php echo BASE_URL; ?>/public/images/resource/blog-8.jpg" alt=""></a></figure>
-                            <a href="#" class="date"><i class="far fa-calendar"></i>Sep 8, 2020</a>
+                            <figure class="image">
+                                <a href="<?php echo BASE_URL; ?>noticias/ver_noticia/<?php echo $value->getId(); ?>">
+                                    <img src="<?php echo BASE_URL; ?>/public/images/noticias/<?php echo $value->getId() ?>.jpg" alt="">
+                                </a>
+                            </figure>
+                            <a href="#" class="date"><i class="far fa-calendar"></i><?php echo $value->getFecha()->format('d/m/Y') ?></a>
                         </div>
                         <div class="lower-content">
                             <h4>
-                                <a href="<?php echo BASE_URL; ?>noticias/ver_noticia">
-                                    Emisión y entrada del CFDI de nóminas: las dos caras de la moneda.
+                                <a href="<?php echo BASE_URL; ?>noticias/ver_noticia/<?php echo $value->getId(); ?>">
+                                    <?php echo $value->getTitulo(); ?>
                                 </a>
                             </h4>
                             <div class="text">
-                                Es importante mencionar que para efectos de la deducción de la nómina, los patrones deberán emitir un CFDI por cada uno de los pagos realizados durante el ejercicio; podran emitir un CFDI por pago o bien integrar en un mismo CFDI varios complementos de nómina.
+                                <?php echo $value->getContenido(); ?>
                             </div>
-                            <a href="<?php echo BASE_URL; ?>noticias/ver_noticia" class="theme-btn icon-btn-two read-more-btn"><span>Ver más</span></a>
+                            <a href="<?php echo BASE_URL; ?>noticias/ver_noticia/<?php echo $value->getId(); ?>" class="theme-btn icon-btn-two read-more-btn"><span>Ver más</span></a>
                             <div class="post-info">
                                 <div class="post-author">
                                     <img src="<?php echo BASE_URL; ?>/public/images/resource/author-thumb.png" alt="" />
@@ -48,177 +52,7 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="news-block style-two-even">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image"><a href="<?php echo BASE_URL; ?>noticias/ver_noticia"><img src="<?php echo BASE_URL; ?>/public/images/resource/blog-8.jpg" alt=""></a></figure>
-                            <a href="#" class="date"><i class="far fa-calendar"></i>Sep 8, 2020</a>
-                        </div>
-                        <div class="lower-content">
-                            <h4>
-                                <a href="<?php echo BASE_URL; ?>noticias/ver_noticia">
-                                    Emisión y entrada del CFDI de nóminas: las dos caras de la moneda.
-                                </a>
-                            </h4>
-                            <div class="text">
-                                Es importante mencionar que para efectos de la deducción de la nómina, los patrones deberán emitir un CFDI por cada uno de los pagos realizados durante el ejercicio; podran emitir un CFDI por pago o bien integrar en un mismo CFDI varios complementos de nómina.
-                            </div>
-                            <a href="<?php echo BASE_URL; ?>noticias/ver_noticia" class="theme-btn icon-btn-two read-more-btn"><span>Ver más</span></a>
-                            <div class="post-info">
-                                <div class="post-author">
-                                    <img src="<?php echo BASE_URL; ?>/public/images/resource/author-thumb.png" alt="" />
-                                    admin
-                                </div>
-
-                                <div class="post-option">
-                                    <div class="coments_count"><a href="#"><i class="fa fa-comment"></i>0</a></div>
-                                    <ul class="social-share">
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="news-block style-two-even">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image"><a href="<?php echo BASE_URL; ?>noticias/ver_noticia"><img src="<?php echo BASE_URL; ?>/public/images/resource/blog-8.jpg" alt=""></a></figure>
-                            <a href="#" class="date"><i class="far fa-calendar"></i>Sep 8, 2020</a>
-                        </div>
-                        <div class="lower-content">
-                            <h4>
-                                <a href="<?php echo BASE_URL; ?>noticias/ver_noticia">
-                                    Emisión y entrada del CFDI de nóminas: las dos caras de la moneda.
-                                </a>
-                            </h4>
-                            <div class="text">
-                                Es importante mencionar que para efectos de la deducción de la nómina, los patrones deberán emitir un CFDI por cada uno de los pagos realizados durante el ejercicio; podran emitir un CFDI por pago o bien integrar en un mismo CFDI varios complementos de nómina.
-                            </div>
-                            <a href="<?php echo BASE_URL; ?>noticias/ver_noticia" class="theme-btn icon-btn-two read-more-btn"><span>Ver más</span></a>
-                            <div class="post-info">
-                                <div class="post-author">
-                                    <img src="<?php echo BASE_URL; ?>/public/images/resource/author-thumb.png" alt="" />
-                                    admin
-                                </div>
-
-                                <div class="post-option">
-                                    <div class="coments_count"><a href="#"><i class="fa fa-comment"></i>0</a></div>
-                                    <ul class="social-share">
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="news-block style-two-even">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image"><a href="<?php echo BASE_URL; ?>noticias/ver_noticia"><img src="<?php echo BASE_URL; ?>/public/images/resource/blog-8.jpg" alt=""></a></figure>
-                            <a href="#" class="date"><i class="far fa-calendar"></i>Sep 8, 2020</a>
-                        </div>
-                        <div class="lower-content">
-                            <h4>
-                                <a href="<?php echo BASE_URL; ?>noticias/ver_noticia">
-                                    Emisión y entrada del CFDI de nóminas: las dos caras de la moneda.
-                                </a>
-                            </h4>
-                            <div class="text">
-                                Es importante mencionar que para efectos de la deducción de la nómina, los patrones deberán emitir un CFDI por cada uno de los pagos realizados durante el ejercicio; podran emitir un CFDI por pago o bien integrar en un mismo CFDI varios complementos de nómina.
-                            </div>
-                            <a href="<?php echo BASE_URL; ?>noticias/ver_noticia" class="theme-btn icon-btn-two read-more-btn"><span>Ver más</span></a>
-                            <div class="post-info">
-                                <div class="post-author">
-                                    <img src="<?php echo BASE_URL; ?>/public/images/resource/author-thumb.png" alt="" />
-                                    admin
-                                </div>
-
-                                <div class="post-option">
-                                    <div class="coments_count"><a href="#"><i class="fa fa-comment"></i>0</a></div>
-                                    <ul class="social-share">
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="news-block style-two-even">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image"><a href="<?php echo BASE_URL; ?>noticias/ver_noticia"><img src="<?php echo BASE_URL; ?>/public/images/resource/blog-8.jpg" alt=""></a></figure>
-                            <a href="#" class="date"><i class="far fa-calendar"></i>Sep 8, 2020</a>
-                        </div>
-                        <div class="lower-content">
-                            <h4>
-                                <a href="<?php echo BASE_URL; ?>noticias/ver_noticia">
-                                    Emisión y entrada del CFDI de nóminas: las dos caras de la moneda.
-                                </a>
-                            </h4>
-                            <div class="text">
-                                Es importante mencionar que para efectos de la deducción de la nómina, los patrones deberán emitir un CFDI por cada uno de los pagos realizados durante el ejercicio; podran emitir un CFDI por pago o bien integrar en un mismo CFDI varios complementos de nómina.
-                            </div>
-                            <a href="<?php echo BASE_URL; ?>noticias/ver_noticia" class="theme-btn icon-btn-two read-more-btn"><span>Ver más</span></a>
-                            <div class="post-info">
-                                <div class="post-author">
-                                    <img src="<?php echo BASE_URL; ?>/public/images/resource/author-thumb.png" alt="" />
-                                    admin
-                                </div>
-
-                                <div class="post-option">
-                                    <div class="coments_count"><a href="#"><i class="fa fa-comment"></i>0</a></div>
-                                    <ul class="social-share">
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="news-block style-two-even">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image"><a href="<?php echo BASE_URL; ?>noticias/ver_noticia"><img src="<?php echo BASE_URL; ?>/public/images/resource/blog-8.jpg" alt=""></a></figure>
-                            <a href="#" class="date"><i class="far fa-calendar"></i>Sep 8, 2020</a>
-                        </div>
-                        <div class="lower-content">
-                            <h4>
-                                <a href="<?php echo BASE_URL; ?>noticias/ver_noticia">
-                                    Emisión y entrada del CFDI de nóminas: las dos caras de la moneda.
-                                </a>
-                            </h4>
-                            <div class="text">
-                                Es importante mencionar que para efectos de la deducción de la nómina, los patrones deberán emitir un CFDI por cada uno de los pagos realizados durante el ejercicio; podran emitir un CFDI por pago o bien integrar en un mismo CFDI varios complementos de nómina.
-                            </div>
-                            <a href="<?php echo BASE_URL; ?>noticias/ver_noticia" class="theme-btn icon-btn-two read-more-btn"><span>Ver más</span></a>
-                            <div class="post-info">
-                                <div class="post-author">
-                                    <img src="<?php echo BASE_URL; ?>/public/images/resource/author-thumb.png" alt="" />
-                                    admin
-                                </div>
-
-                                <div class="post-option">
-                                    <div class="coments_count"><a href="#"><i class="fa fa-comment"></i>0</a></div>
-                                    <ul class="social-share">
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </section>
