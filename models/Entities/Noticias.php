@@ -1,0 +1,171 @@
+<?php
+
+
+/* Date: 24/08/2020 21:15:03 */
+
+namespace Entities;
+
+/**
+ * Noticias
+ *
+ * @Table(name="noticias")
+ * @Entity
+ */
+class Noticias
+{
+
+function __construct() {}
+
+    /**
+     * @var integer
+     *
+     * @Column(name="id", type="integer", nullable=false)
+     * @Id
+     * @GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @Column(name="titulo", type="string", length=200, nullable=false)
+     */
+    private $titulo;
+
+    /**
+     * @var string
+     *
+     * @Column(name="contenido", type="text", nullable=false)
+     */
+    private $contenido;
+
+    /**
+     * @var \DateTime
+     *
+     * @Column(name="fecha", type="datetime", nullable=true)
+     */
+    private $fecha;
+
+    /**
+     * @var boolean
+     *
+     * @Column(name="estado", type="boolean", nullable=false)
+     */
+    private $estado;
+
+
+    /** 
+     * Set id
+     *
+     * @param integer $id
+     * @return Noticias
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    
+        return $this;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /** 
+     * Set titulo
+     *
+     * @param string $titulo
+     * @return Noticias
+     */
+    public function setTitulo($titulo)
+    {
+        $this->titulo = $titulo;
+    
+        return $this;
+    }
+
+    /**
+     * Get titulo
+     *
+     * @return string 
+     */
+    public function getTitulo()
+    {
+        return $this->titulo;
+    }
+
+    /** 
+     * Set contenido
+     *
+     * @param string $contenido
+     * @return Noticias
+     */
+    public function setContenido($contenido)
+    {
+        $this->contenido = $contenido;
+    
+        return $this;
+    }
+
+    /**
+     * Get contenido
+     *
+     * @return string 
+     */
+    public function getContenido()
+    {
+        return $this->contenido;
+    }
+
+    /** 
+     * Set fecha
+     *
+     * @param \DateTime $fecha
+     * @return Dosificacion
+     */
+    public function setFecha($fecha)
+    {
+        $this->fecha = $fecha;
+    
+        return $this;
+    }
+
+    /**
+     * Get fecha
+     *
+     * @return \DateTime 
+     */
+    public function getFecha()
+    {
+        return $this->fecha;
+    }
+
+    /** 
+     * Set estado
+     *
+     * @param boolean $estado
+     * @return Noticias
+     */
+    public function setEstado($estado)
+    {
+        $this->estado = $estado;
+    
+        return $this;
+    }
+
+    /**
+     * Get estado
+     *
+     * @return boolean 
+     */
+    public function getEstado()
+    {
+        return $this->estado;
+    }
+}

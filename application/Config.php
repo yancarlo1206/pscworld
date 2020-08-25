@@ -26,7 +26,7 @@ define('BASE_URL', 'http://localhost/pscworld/');
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
-define('DB_NAME', 'pscworld');
+define('DB_NAME', 'pscworld_bd');
 define('DB_PORT', '');
 define('DB_CHAR', 'utf8');
 
