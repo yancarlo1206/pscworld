@@ -21,7 +21,7 @@ class noticiasController extends Controller {
     public function listar() {
         $this->_view->noticias = $this->_noticia->resultList();
         $this->_view->titulo = '';
-        $this->_view->renderizar('listar', 'noticias');
+        $this->_view->renderizar('listar', 'noticias', 'listar_noticia');
     }
 
     public function registrar() {
@@ -57,7 +57,23 @@ class noticiasController extends Controller {
             }
         }
         $this->_view->titulo = '';
-        $this->_view->renderizar('registrar', 'noticias');
+        $this->_view->renderizar('registrar', 'noticias', 'registrar_noticia');
+    }
+
+    public function editar($noticia=null){
+        $this->_view->noticia = $this->_noticia->get($noticia);
+        if($this->getInt('guardar')){
+            $this->_noticia->getInstance()->setTitulo($this->getTexto('titulo'));
+            $this->_noticia->getInstance()->setContenido($this->getTexto('contenido'));
+            try {
+                $this->_noticia->update();
+                $this->redireccionar('noticias/listar/');
+            } catch (Exception $e) {
+                echo $e;                
+            }
+        }
+        $this->_view->titulo = '';
+        $this->_view->renderizar('registrar', 'noticias', 'registrar_noticia');
     }
 
     public function eliminar($noticia=null){

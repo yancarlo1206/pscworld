@@ -1,80 +1,84 @@
 <section class="checkout-page" style="padding-top: 30px;">
-        <div class="auto-container">
-            <div class="coupen-outer">
-                <div class="upper-box">
-                    <div class="text"><span class="icon flaticon-news"></span> Lista Noticias</div>
-                    <a href="listanoticias.html" class="theme-btn btn-style-four">Ver</a>
-                </div>
-                <!-- 
-                <div class="form-group">
-                    <label>Buscar noticia.</label>
-                    <input type="text" name="coupen-code" placeholder="Identificador de noticia" class="input">
-                    <button class="theme-btn btn-style-four">Buscar</button>
-                </div> -->
+    <div class="auto-container">
+        <div class="coupen-outer">
+            <div class="upper-box">
+                <div class="text"><span class="icon flaticon-news"></span> Lista Noticias</div>
+                <a href="<?php echo BASE_URL ?>noticias" class="theme-btn btn-style-four">Ver</a>
+            </div>
+            <!-- 
+            <div class="form-group">
+                <label>Buscar noticia.</label>
+                <input type="text" name="coupen-code" placeholder="Identificador de noticia" class="input">
+                <button class="theme-btn btn-style-four">Buscar</button>
+            </div> -->
 
-                <div class="row">
+            <div class="row">
 
-                    <div class="column col-xl-7 col-lg-8 col-md-12 col-sm-12">
-                        <!--Checkout Details-->
-                        <div class="checkout-form">
-                            <form method="post" action="" class="default-form" enctype="multipart/form-data">
-                                <input type="hidden" name="guardar" value="1">
-                                <div class="row">
-                                    <div class="column col-lg-12 col-md-12">
-                                        <h3 class="title">Registrar Noticia</h3>
-    
-                                        <!--Form Group-->
-                                        <div class="form-group">
-                                            <div class="field-label">Titulo Noticia <sup>*</sup></div>
-                                            <input type="text" name="titulo" value="" placeholder="">
-                                        </div>
-                                        
-                                        <!--Form Group-->
-                                        <div class="form-group">
-                                            <div class="field-label">Imagen <sup>*</sup></div>
-                                            <input style="height: 45px;" type="file" class="form-control" name="imagen">
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="field-label">Contenido Noticia <sup>*</sup></div>
-                                            <textarea name="contenido" cols="30" rows="10"></textarea>
-                                        </div>                
-                                        <button class="theme-btn btn-style-four" type="submit">Registrar</button>                         
+                <div class="column col-xl-7 col-lg-8 col-md-12 col-sm-12">
+                    <!--Checkout Details-->
+                    <div class="checkout-form">
+                        <form method="post" action="" class="default-form" enctype="multipart/form-data">
+                            <input type="hidden" name="guardar" value="1">
+                            <div class="row">
+                                <div class="column col-lg-12 col-md-12">
+                                    <h3 class="title">Registrar Noticia</h3>
+
+                                    <!--Form Group-->
+                                    <div class="form-group">
+                                        <div class="field-label">Titulo Noticia <sup>*</sup></div>
+                                        <input type="text" name="titulo" value="<?php if(isset($this->noticia)) echo $this->noticia->getTitulo() ?>" placeholder="">
                                     </div>
+                                    
+                                    <!--Form Group-->
+                                    <div class="form-group">
+                                        <div class="field-label">Imagen <sup>*</sup></div>
+                                        <input style="height: 45px;" type="file" class="form-control" name="imagen">
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="field-label">Contenido Noticia <sup>*</sup></div>
+                                        <textarea name="contenido" cols="30" rows="10"><?php if(isset($this->noticia)) echo $this->noticia->getContenido() ?></textarea>
+                                    </div>                
+                                    <?php if(isset($this->noticia)){ ?>
+                                        <button class="theme-btn btn-style-four" type="submit">Actualizar</button>       
+                                    <?php }else{ ?>                  
+                                        <button class="theme-btn btn-style-four" type="submit">Registrar</button>       
+                                    <?php } ?>
                                 </div>
-                            </form>
-                        </div>
-                        <!--End Checkout Details-->
-                    </div>
-    
-                    <div class="column col-xl-5 col-lg-4 col-md-12 col-sm-12">
-                        <!--Order Box-->
-                        <div class="sidebar-widget latest-news">
-                            <div class="sidebar-title"><h3>Noticias recientes</h3></div>
-                            <div class="widget-content">
-                                <article class="post">
-                                    <figure class="thumb"><img src="<?php echo BASE_URL; ?>public/images/resource/post-thumb-1.jpg" alt=""></figure>
-                                    <h5>Fuerza laboral</h5>
-                                    <div class="post-info">Sep 09 2020</div>
-                                    <a href="blog-single.html" class="overlay-link"></a>
-                                </article>
-
-                                <article class="post">
-                                    <figure class="thumb"><img src="<?php echo BASE_URL; ?>public/images/resource/post-thumb-2.jpg" alt=""></figure>
-                                    <h5>Una llamada para ti</h5>
-                                    <div class="post-info">Sep 09 2020</div>
-                                    <a href="blog-single.html" class="overlay-link"></a>
-                                </article>
-
-                                <article class="post">
-                                    <figure class="thumb"><img src="<?php echo BASE_URL; ?>public/images/resource/post-thumb-3.jpg" alt=""></figure>
-                                    <h5>Compromiso en nuestro equipo</h5>
-                                    <div class="post-info">Sep 09 2020</div>
-                                    <a href="blog-single.html" class="overlay-link"></a>
-                                </article>
                             </div>
+                        </form>
+                    </div>
+                    <!--End Checkout Details-->
+                </div>
+
+                <div class="column col-xl-5 col-lg-4 col-md-12 col-sm-12">
+                    <!--Order Box-->
+                    <div class="sidebar-widget latest-news">
+                        <div class="sidebar-title"><h3>Noticias recientes</h3></div>
+                        <div class="widget-content">
+                            <article class="post">
+                                <figure class="thumb"><img src="<?php echo BASE_URL; ?>public/images/resource/post-thumb-1.jpg" alt=""></figure>
+                                <h5>Fuerza laboral</h5>
+                                <div class="post-info">Sep 09 2020</div>
+                                <a href="blog-single.html" class="overlay-link"></a>
+                            </article>
+
+                            <article class="post">
+                                <figure class="thumb"><img src="<?php echo BASE_URL; ?>public/images/resource/post-thumb-2.jpg" alt=""></figure>
+                                <h5>Una llamada para ti</h5>
+                                <div class="post-info">Sep 09 2020</div>
+                                <a href="blog-single.html" class="overlay-link"></a>
+                            </article>
+
+                            <article class="post">
+                                <figure class="thumb"><img src="<?php echo BASE_URL; ?>public/images/resource/post-thumb-3.jpg" alt=""></figure>
+                                <h5>Compromiso en nuestro equipo</h5>
+                                <div class="post-info">Sep 09 2020</div>
+                                <a href="blog-single.html" class="overlay-link"></a>
+                            </article>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>

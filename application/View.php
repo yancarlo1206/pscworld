@@ -57,21 +57,53 @@ class View {
                 'titulo' => 'Doc2sign',
                 'enlace' => BASE_URL . 'doc2sign/'
                 );
-        $menu[] = array(
+        if(Session::get('autenticado')){
+            $menu[] = array(
+                'id' => 'noticias',
+                'titulo' => 'Noticias',
+                'enlace' => BASE_URL . 'noticias/',
+                'submenu' => 
+                    array(
+                        array(
+                            'id' => 'listar_noticia',
+                            'titulo' => 'Listar Noticias',
+                            'enlace' => BASE_URL . 'noticias/listar'
+                        ),
+                        array(
+                            'id' => 'registrar_noticia',
+                            'titulo' => 'Registrar Noticias',
+                            'enlace' => BASE_URL . 'noticias/registrar/'
+                        )
+                    )
+                );
+        }else{
+            $menu[] = array(
                 'id' => 'noticias',
                 'titulo' => 'Noticias',
                 'enlace' => BASE_URL . 'noticias/'
-                );
+                );  
+        }
         $menu[] = array(
                 'id' => 'contacto',
                 'titulo' => 'Contacto',
                 'enlace' => BASE_URL . 'contacto/'
                 );
-        $menu[] = array(
+
+        if(Session::get('autenticado')){
+            $menu[] = array(
+                'id' => 'login',
+                'titulo' => 'Cerrar Sesion',
+                'enlace' => BASE_URL . 'login/cerrar/'
+                );
+        }else{
+            $menu[] = array(
                 'id' => 'login',
                 'titulo' => 'Iniciar Sesion',
                 'enlace' => BASE_URL . 'login/'
                 );
+        }
+
+        
 
         if(Session::get('autenticado')){
 

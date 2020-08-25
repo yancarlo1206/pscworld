@@ -32,8 +32,8 @@
                         </div>
                         <div class="col-xs-2 td">
                             <!-- <a class="register-button" href="#">Register</a> -->
-                            <a href="post.html"><i class="far fa-eye btn-accion"></i></a>
-                            <a href=""><i class="far fa-edit  btn-accion"></i></a>
+                            <a href="<?php echo BASE_URL ?>noticias/ver_noticia/<?php echo $value->getId() ?>"><i class="far fa-eye btn-accion"></i></a>
+                            <a href="<?php echo BASE_URL ?>noticias/editar/<?php echo $value->getId() ?>"><i class="far fa-edit  btn-accion"></i></a>
                             <a href="<?php echo BASE_URL ?>noticias/eliminar/<?php echo $value->getId() ?>"><i class="far fa-trash-alt  btn-accion btn-rojo "></i> </a>
                         </div>
                     </div>

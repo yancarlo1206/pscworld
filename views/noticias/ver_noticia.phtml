@@ -1,3 +1,25 @@
+<style>
+.btn-whatsapp {
+       display:block;
+       width:100px;
+       height:100px;
+       color:#fff;
+       position: fixed;
+       right:20px;
+       bottom:20px;
+       border-radius:50%;
+       line-height:80px;
+       text-align:center;
+       z-index:999;
+}
+</style>
+<?php if(Session::get('autenticado')){ ?>
+<div class="btn-whatsapp">
+    <a href="<?php echo BASE_URL ?>noticias/editar/<?php echo $this->noticia->getId() ?>">
+        <img src="<?php echo BASE_URL ?>public/images/logo-4.png" alt="" title='Editar Noticia' >
+    </a>
+</div>
+<?php } ?>
 <div class="sidebar-page-container right-sidebar" style="padding-top: 30px">
         <div class="auto-container">
             <div class="row clearfix">
