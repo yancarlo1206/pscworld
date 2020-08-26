@@ -54,7 +54,10 @@
                         <li><a class="abririmg" href=""><i class="fa flaticon-medal"></i>Acreditación</a></li>
                         <?php if(!Session::get('autenticado')){ ?>
                             <li><a href="<?php echo BASE_URL; ?>login"><i class="fa flaticon-user"></i>Iniciar sesión</a></li>
+                        <?php }else{ ?>
+                            <li><a href="<?php echo BASE_URL; ?>login/cerrar"><i class="fa flaticon-arrow-pointing-to-right"></i>Cerrar sesión</a></li>
                         <?php } ?>
+                            
                     </ul>
                 </div>
                 <div class="top-right">
