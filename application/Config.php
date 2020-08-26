@@ -7,7 +7,7 @@ define('APP_EMAIL', 'contacto@pscworld.co');
 define('APP_SLOGAN', 'PSCWORLD');
 define('APP_COMPANY', 'www.pscworld.co');
 define('SESSION_TIME', 100);
-define('HASH_KEY', '4eba6d532be78');
+define('HASH_KEY', '4ebz7d533be89');
 
 /*if (in_array(@$_SERVER['REMOTE_ADDR'], array(
     '127.0.0.1',

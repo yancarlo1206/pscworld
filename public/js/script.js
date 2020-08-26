@@ -557,18 +557,23 @@
 			}
             
             $.ajax({
-                url:"sendemail.php",
+                url:"http://localhost/pscworld/login/iniciar/",
                 method:"POST",
                 data: $(form).serialize(),
                 beforeSend:function(){
                     $('#email-form .response').html('<div class="text-info"><img src="images/icons/preloader.gif"> Loading...</div>');
                 },
                 success:function(data){
-                    $('form').trigger("reset");
-                    $('#email-form .response').fadeIn().html(data);
-                    setTimeout(function(){
-                        $('#email-form .response').fadeOut("slow");
-                    }, 5000);
+                	if(data === '+ok'){
+	                    $('form').trigger("reset");
+	                    $('#email-form .response').fadeIn().html("Correcto Inicio de Sesión");
+	                    setTimeout(function(){
+	                        $('#email-form .response').fadeOut("slow");
+	                    }, 5000);
+	                    location.reload();
+                	}else{
+                		$('#email-form .response').fadeIn().html('<div class="failed">Error de Usuario y Clave.</div>');	
+                	}
                 },
                 error:function(){
                     $('#email-form .response').fadeIn().html(data);

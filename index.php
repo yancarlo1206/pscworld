@@ -28,7 +28,7 @@ try{
     require_once APP_PATH . 'Hash.php';
     Session::init();
 	//echo "DEFAULT: ".Hash::getHash('sha1', '1234', HASH_KEY);exit;
-    $tem = new Doctrine;$tem->generateEntities();exit;
+    //$tem = new Doctrine;$tem->generateEntities();exit;
 	//$tem = new Doctrine;$tem->generateModels();exit;
 	Bootstrap::run(new Request);
 }catch(Exception $e){
