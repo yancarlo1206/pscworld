@@ -1,17 +1,17 @@
 <?php
 
 
-/* Date: 25/08/2020 21:27:58 */
+/* Date: 25/08/2020 21:27:35 */
 
 namespace Entities;
 
 /**
- * Noticias
+ * Banners
  *
- * @Table(name="noticias")
+ * @Table(name="banners")
  * @Entity
  */
-class Noticias
+class Banners
 {
 
 function __construct() {}
@@ -33,13 +33,6 @@ function __construct() {}
     private $titulo;
 
     /**
-     * @var string
-     *
-     * @Column(name="contenido", type="text", nullable=false)
-     */
-    private $contenido;
-
-    /**
      * @var \DateTime
      *
      * @Column(name="fecha", type="datetime", nullable=false)
@@ -58,7 +51,7 @@ function __construct() {}
      * Set id
      *
      * @param integer $id
-     * @return Noticias
+     * @return Banners
      */
     public function setId($id)
     {
@@ -81,7 +74,7 @@ function __construct() {}
      * Set titulo
      *
      * @param string $titulo
-     * @return Noticias
+     * @return Banners
      */
     public function setTitulo($titulo)
     {
@@ -101,33 +94,10 @@ function __construct() {}
     }
 
     /** 
-     * Set contenido
-     *
-     * @param string $contenido
-     * @return Noticias
-     */
-    public function setContenido($contenido)
-    {
-        $this->contenido = $contenido;
-    
-        return $this;
-    }
-
-    /**
-     * Get contenido
-     *
-     * @return string 
-     */
-    public function getContenido()
-    {
-        return $this->contenido;
-    }
-
-    /** 
      * Set fecha
      *
      * @param \DateTime $fecha
-     * @return Noticias
+     * @return Banners
      */
     public function setFecha($fecha)
     {
@@ -150,7 +120,7 @@ function __construct() {}
      * Set estado
      *
      * @param boolean $estado
-     * @return Noticias
+     * @return Banners
      */
     public function setEstado($estado)
     {
