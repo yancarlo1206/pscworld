@@ -1,17 +1,17 @@
 <?php
 
 
-/* Date: 25/08/2020 21:27:58 */
+/* Date: 25/08/2020 21:27:35 */
 
 namespace Entities;
 
 /**
- * Banners
+ * Usuarios
  *
- * @Table(name="banners")
+ * @Table(name="usuarios")
  * @Entity
  */
-class Banners
+class Usuarios
 {
 
 function __construct() {}
@@ -28,21 +28,21 @@ function __construct() {}
     /**
      * @var string
      *
-     * @Column(name="titulo", type="string", length=200, nullable=false)
+     * @Column(name="email", type="string", length=100, nullable=false)
      */
-    private $titulo;
+    private $email;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @Column(name="fecha", type="datetime", nullable=false)
+     * @Column(name="clave", type="string", length=200, nullable=false)
      */
-    private $fecha;
+    private $clave;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @Column(name="estado", type="boolean", nullable=false)
+     * @Column(name="estado", type="integer", nullable=false)
      */
     private $estado;
 
@@ -51,7 +51,7 @@ function __construct() {}
      * Set id
      *
      * @param integer $id
-     * @return Banners
+     * @return Usuarios
      */
     public function setId($id)
     {
@@ -71,56 +71,56 @@ function __construct() {}
     }
 
     /** 
-     * Set titulo
+     * Set email
      *
-     * @param string $titulo
-     * @return Banners
+     * @param string $email
+     * @return Usuarios
      */
-    public function setTitulo($titulo)
+    public function setEmail($email)
     {
-        $this->titulo = $titulo;
+        $this->email = $email;
     
         return $this;
     }
 
     /**
-     * Get titulo
+     * Get email
      *
      * @return string 
      */
-    public function getTitulo()
+    public function getEmail()
     {
-        return $this->titulo;
+        return $this->email;
     }
 
     /** 
-     * Set fecha
+     * Set clave
      *
-     * @param \DateTime $fecha
-     * @return Banners
+     * @param string $clave
+     * @return Usuarios
      */
-    public function setFecha($fecha)
+    public function setClave($clave)
     {
-        $this->fecha = $fecha;
+        $this->clave = $clave;
     
         return $this;
     }
 
     /**
-     * Get fecha
+     * Get clave
      *
-     * @return \DateTime 
+     * @return string 
      */
-    public function getFecha()
+    public function getClave()
     {
-        return $this->fecha;
+        return $this->clave;
     }
 
     /** 
      * Set estado
      *
-     * @param boolean $estado
-     * @return Banners
+     * @param integer $estado
+     * @return Usuarios
      */
     public function setEstado($estado)
     {
@@ -132,7 +132,7 @@ function __construct() {}
     /**
      * Get estado
      *
-     * @return boolean 
+     * @return integer 
      */
     public function getEstado()
     {

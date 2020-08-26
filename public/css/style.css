@@ -10467,11 +10467,46 @@ hr{
     float: left;
 }
 
-@media (max-width: 992px){}
+@media (max-width: 992px){
 	.hstb-pricing-table-holder {
 		overflow: scroll;
 		border-radius: 10px;
 		border: 1px solid #d3d3dd;
 	}
 }
+
+.container-btn-banner
+{
+	padding-bottom: 20px;
+	width: 100%;
+}
+
+.btn-banner
+{
+	align-items: center;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	background-color: #FFAC00;
+	display: flex;
+	margin: 0 auto;
+	height: 45px;
+	width: 200px;
+	transition: .5s;
+}
+
+.btn-banner:hover
+{
+	background-color: black;
+}
+
+.btn-banner a
+{
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 0 auto;
+}
+
+
+
 
