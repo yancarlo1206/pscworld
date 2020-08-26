@@ -95,15 +95,7 @@ class View {
                 'titulo' => 'Cerrar Sesion',
                 'enlace' => BASE_URL . 'login/cerrar/'
                 );
-        }else{
-            $menu[] = array(
-                'id' => 'login',
-                'titulo' => 'Iniciar Sesion',
-                'enlace' => BASE_URL . 'login/'
-                );
         }
-
-        
 
         if(Session::get('autenticado')){
 

@@ -52,7 +52,9 @@
                             Miguel Hidalgo, 11800 Ciudad de México, CDMX
                         </li>
                         <li><a class="abririmg" href=""><i class="fa flaticon-medal"></i>Acreditación</a></li>
-                        <li><a href="<?php echo BASE_URL; ?>login"><i class="fa flaticon-user"></i>Iniciar sesión</a></li>
+                        <?php if(!Session::get('autenticado')){ ?>
+                            <li><a href="<?php echo BASE_URL; ?>login"><i class="fa flaticon-user"></i>Iniciar sesión</a></li>
+                        <?php } ?>
                     </ul>
                 </div>
                 <div class="top-right">

@@ -5,10 +5,9 @@
                 <div class="text"><span class="icon flaticon-news"></span> Lista noticias</div>
             </div>
         </div>
-
-        <img class="img-noinfo" src="<?php echo BASE_URL; ?>/public/images/noinfo.png">
-
-
+        <?php if(!count($this->noticias)){ ?>
+            <img class="img-noinfo" src="<?php echo BASE_URL; ?>/public/images/noinfo.png">
+        <?php } else{ ?>
         <div class="col-sm-12">
             <div class="hstb-pricing-table-holder">
                 <div class="hstb-table">
@@ -43,5 +42,6 @@
                 </div>
             </div>
         </div>
+        <?php } ?>
     </div>
 </section>

@@ -10,8 +10,9 @@
     <!-- News Section -->
     <section class="news-section blog-small-images">
         <div class="auto-container">
-            <img class="img-noinfo" src="<?php echo BASE_URL; ?>/public/images/noinfo.png">
-
+            <?php if(!count($this->noticias)){ ?>
+                <img class="img-noinfo" src="<?php echo BASE_URL; ?>/public/images/noinfo.png">
+            <?php } else{ ?>
             <!-- Blog Checkerboard -->
             <div class="row">
                 <!-- News Block -->
@@ -56,5 +57,6 @@
                 </div>
                 <?php } ?>
             </div>
+            <?php } ?>
         </div>
     </section>

@@ -1,7 +1,7 @@
 <?php
 
 
-/* Date: 24/08/2020 21:15:03 */
+/* Date: 25/08/2020 21:04:53 */
 
 namespace Entities;
 
@@ -38,6 +38,13 @@ function __construct() {}
      * @Column(name="contenido", type="text", nullable=false)
      */
     private $contenido;
+
+    /**
+     * @var \DateTime
+     *
+     * @Column(name="fecha", type="datetime", nullable=false)
+     */
+    private $fecha;
 
     /**
      * @var boolean
@@ -114,6 +121,29 @@ function __construct() {}
     public function getContenido()
     {
         return $this->contenido;
+    }
+
+    /** 
+     * Set fecha
+     *
+     * @param \DateTime $fecha
+     * @return Noticias
+     */
+    public function setFecha($fecha)
+    {
+        $this->fecha = $fecha;
+    
+        return $this;
+    }
+
+    /**
+     * Get fecha
+     *
+     * @return \DateTime 
+     */
+    public function getFecha()
+    {
+        return $this->fecha;
     }
 
     /** 
