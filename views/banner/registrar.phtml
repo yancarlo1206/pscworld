@@ -1,6 +1,10 @@
 <section class="checkout-page" style="padding-top: 30px;">
     <div class="auto-container">
         <div class="coupen-outer">
+            <div class="upper-box">
+                <div class="text"><span class="icon flaticon-news"></span> Lista Banners</div>
+                <a href="<?php echo BASE_URL ?>banner" class="theme-btn btn-style-four">Ver</a>
+            </div>
             <div class="row">
                 <div class="column col-xl-7 col-lg-8 col-md-12 col-sm-12">
                     <!--Checkout Details-->
@@ -9,12 +13,12 @@
                             <input type="hidden" name="guardar" value="1">
                             <div class="row">
                                 <div class="column col-lg-12 col-md-12">
-                                    <h3 class="title">Registrar Noticia</h3>
+                                    <h3 class="title">Registrar Banner</h3>
 
                                     <!--Form Group-->
                                     <div class="form-group">
-                                        <div class="field-label">Titulo Noticia <sup>*</sup></div>
-                                        <input type="text" name="titulo" value="<?php if(isset($this->noticia)) echo $this->noticia->getTitulo() ?>" placeholder="">
+                                        <div class="field-label">Titulo Banner <sup>*</sup></div>
+                                        <input type="text" name="titulo" value="<?php if(isset($this->banner)) echo $this->banner->getTitulo() ?>" placeholder="">
                                     </div>
                                     
                                     <!--Form Group-->
@@ -23,7 +27,7 @@
                                         <input style="height: 45px;" type="file" class="form-control" name="imagen">
                                     </div>
                                                    
-                                    <?php if(isset($this->noticia)){ ?>
+                                    <?php if(isset($this->banner)){ ?>
                                         <button class="theme-btn btn-style-four" type="submit">Actualizar</button>       
                                     <?php }else{ ?>                  
                                         <button class="theme-btn btn-style-four" type="submit">Registrar</button>       

@@ -173,12 +173,13 @@
     </div>
 </section>
 <!--End Main Slider-->
-
+<?php if(Session::get('autenticado')){ ?>
 <div class="container-btn-banner">
     <div class="btn-banner">
-        <a href="<?php echo BASE_URL; ?>banner/listar">Editar Banner</a>
+        <a href="<?php echo BASE_URL; ?>banner">Editar Banner</a>
     </div>
 </div>
+<?php } ?>
 
 <!-- Case Study Section -->
 <section class="case-study-section">
