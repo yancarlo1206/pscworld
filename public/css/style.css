@@ -10507,6 +10507,34 @@ hr{
 	margin: 0 auto;
 }
 
+.box-edit-noticia
+{
+    background-color: #FFAC00;
+    bottom:15px;
+    border-radius: 5px;
+    color:#fff;
+    display:block;
+    line-height:80px;
+    position: fixed;
+    right:60px;
+    text-align:center;
+    width:170px;
+    padding: 5px 0;
+    z-index:999;
+    transition: .5s;
+}
 
+.box-edit-noticia:hover { background-color: black }
 
+.box-edit-noticia p
+{
+    color: white;
+    font-weight: bold;
+}
 
+.box-edit-noticia p .i-edit
+{
+    background-color: transparent;
+    font-size: 20px;
+    padding-right: 10px;
+}
