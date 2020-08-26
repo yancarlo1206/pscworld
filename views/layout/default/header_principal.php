@@ -61,7 +61,7 @@
                     <ul class="social-icon-one">
                         <li><a href="https://www.facebook.com/PSC-World-SA-de-CV-104638751341047"><span class="fab fa-facebook-f"></span></a></li>
                         <li><a href="https://www.linkedin.com/company/psc-world/?viewAsMember=true"><span class="fab fa-linkedin-in"></span></a></li>
-                        <li><a href="#"><span class="fab flaticon-twitter"></span></a></li>
+                        <li><a href="https://twitter.com/psc_cv"><span class="fab flaticon-twitter"></span></a></li>
                     </ul>
                 </div>
             </div>
