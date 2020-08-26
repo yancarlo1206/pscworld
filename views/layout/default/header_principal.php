@@ -168,9 +168,21 @@
                     <div class="nav-logo"><a href="index.html"><img src="<?php echo BASE_URL; ?>public/images/logo-5.png" alt="" title="" ></a></div><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
                 </nav>
 
-                <div class="menu-search">
-                    <a href="<?php echo BASE_URL; ?>login">Iniciar sesion</a>
-                </div>
+                <?php if(!Session::get('autenticado')){ ?>
+                    <div class="menu-search">
+                        <a href="<?php echo BASE_URL; ?>login">
+                            <i class="fa flaticon-user"></i>
+                            Iniciar sesión
+                        </a>
+                        </div>
+                <?php }else{ ?>
+                    <div class="menu-search">
+                        <a href="<?php echo BASE_URL; ?>login/cerrar">
+                            <i class="fa flaticon-arrow-pointing-to-right"></i>
+                            Cerrar sesión
+                        </a>
+                        </div>
+                <?php } ?>
             </div>
         </div><!-- End Mobile Menu -->
         
