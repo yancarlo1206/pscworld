@@ -90,14 +90,6 @@ class View {
                 );
 
         if(Session::get('autenticado')){
-            $menu[] = array(
-                'id' => 'login',
-                'titulo' => 'Cerrar Sesion',
-                'enlace' => BASE_URL . 'login/cerrar/'
-                );
-        }
-
-        if(Session::get('autenticado')){
 
         }
         if(Session::accesoView('usuario')){

@@ -126,11 +126,23 @@
 <script src="<?php echo BASE_URL; ?>public/js/wow.js"></script>
 <script src="<?php echo BASE_URL; ?>public/js/appear.js"></script>
 <script src="<?php echo BASE_URL; ?>public/js/script.js"></script>
-<script src="<?php echo BASE_URL; ?>public/js/modalimg.js"></script>
+<!-- <script src="<?php echo BASE_URL; ?>public/js/modalimg.js"></script> -->
 <!-- CK Editor -->
 <script src="<?php echo BASE_URL; ?>public/ckeditor/ckeditor.js"></script>
 <script>
-    CKEDITOR.replace( 'editor1' );
+    if($('#editorHtml').length){
+        CKEDITOR.replace('editor1');
+    }
 </script>
+
+<?php if (isset($_layoutParams['js']) && count($_layoutParams['js'])) {
+    for ($i = 0; $i < count($_layoutParams['js']); $i++) {
+        $x = substr($_layoutParams['js'][$i], -3);
+        if ($x[0] == ".") { ?>
+            <script src="<?php echo $_layoutParams['js'][$i] ?>?v=<?php echo(rand()); ?>" type="text/javascript"></script>
+        <?php } else { ?>
+            <link rel="stylesheet" href="<?php echo $_layoutParams['js'][$i] ?>" type="text/css" />
+        <?php } } } ?>
+
 </body>
 </html>

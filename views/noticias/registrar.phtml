@@ -37,7 +37,7 @@
                                     <div class="form-group">
                                         <div class="field-label">Contenido Noticia <sup>*</sup></div>
                                         <!-- name="contenido" -->
-                                        <textarea  name="editor1" cols="30" rows="10"><?php if(isset($this->noticia)) echo $this->noticia->getContenido() ?></textarea>
+                                        <textarea  name="editor1" id="editorHtml" cols="30" rows="10"><?php if(isset($this->noticia)) echo $this->noticia->getContenido() ?></textarea>
                                     </div>                
                                     <?php if(isset($this->noticia)){ ?>
                                         <button class="theme-btn btn-style-four" type="submit">Actualizar</button>       

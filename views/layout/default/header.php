@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Estampado de Tiempo &#8211; SeTech</title>
+    <title><?php echo $this->titulo; ?></title>
     <!-- Stylesheets -->
     <link href="<?php echo BASE_URL; ?>public/css/bootstrap.css" rel="stylesheet">
     <link href="<?php echo BASE_URL; ?>public/css/style.css" rel="stylesheet">
@@ -126,7 +126,7 @@
                 </nav>
 
                 <div class="menu-search">
-                    <a href="<?php echo BASE_URL; ?>login">Iniciar sesion</a>
+                    <a href="<?php echo BASE_URL; ?>login">Iniciar Sesion</a>
                 </div>
             </div>
         </div><!-- End Mobile Menu -->
