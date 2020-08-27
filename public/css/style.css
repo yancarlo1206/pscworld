@@ -63,6 +63,7 @@ Version: 1.0.0
 
 ***/
 
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /*
@@ -160,6 +161,67 @@ a:visited{
 	outline:none;
 }
 
+.box-btn-lista
+{
+	align-items: center;
+	display: inline-flex;
+	margin: 0 auto;
+	height: 40px;
+	border-radius: 30px;
+	width: 40px;
+}
+
+.row-lista:first-child
+{
+	background-color: #f2f2f2;
+}
+
+@media (max-width: 906px){
+	.column-lista:last-child
+	{
+		flex-direction: column;
+	}
+
+	.box-btn-lista
+	{
+		margin-bottom: 5px;
+	}
+}
+
+.btn-lista
+{
+	align-items: center;
+	display: flex;
+	color: white;
+	margin: 0 auto;
+	border-radius: 30px;
+	height: 40px;
+	width: 40px;
+	transition: .5s;
+}
+
+.btn-black { background-color: black;}
+
+.btn-lista:hover
+{
+	
+	color: white;
+}
+
+.btn-lista i
+{
+	font-size: 18px;
+	margin: 0 auto;
+}
+
+.btn-blue
+{
+	background-color: #3d5e98;
+}
+
+.btn-red { color: red;}
+
+
 h1,h2,h3,h4,h5,h6 {
 	position:relative;
 	margin:0px;
@@ -225,9 +287,11 @@ p,.text{
 
 .img-noinfo
 {
-	margin: 30px 0;
 	display: flex;
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
 	width: 70%;
 }
 
@@ -10394,29 +10458,13 @@ hr{
     transition: all 0.3s ease;
 }
 
-.btn-accion {
-    border-radius: 30px;
-    padding: 5px 10px;
-    background-color: black;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 1px;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
+
 
 .btn-rojo
 {
 	background-color: red;
 }
 
-.fa-edit
-{
-	background-color: #3d5e98;
-}
 
 .hstb-pricing-table-holder .hstb-table .row .td .register-button:hover, 
 .hstb-pricing-table-holder .hstb-table .row .td .register-button:focus {
@@ -10474,6 +10522,8 @@ hr{
 		border: 1px solid #d3d3dd;
 	}
 }
+
+
 
 .container-btn-banner
 {
@@ -10537,4 +10587,76 @@ hr{
     background-color: transparent;
     font-size: 20px;
     padding-right: 10px;
+}
+
+.container-lista{
+	padding: 30px 0;
+	width: 100%;
+}
+
+.container-lista__content
+{
+	overflow: hidden;
+	border: 1px solid gray;
+	border-radius: 10px;
+	margin: 0 auto;
+	width: 85%;
+}
+
+.row-lista
+{
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+}
+
+.column-lista
+{
+	align-items: center;
+	padding: 20px 0;
+	border-bottom: 1px solid gray;
+	border-right: 1px solid gray;
+	display: flex;
+}
+
+.column-lista:last-child
+{
+	border-right: 0px;
+}
+
+.column-lista p
+{
+	text-align: center;
+	line-height: 20px;
+	margin: 0 auto;
+}
+
+.container-title-lista
+{
+	background-color: #FFAC00;
+	border-radius: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 30px;
+	width: 85%;
+}
+
+.container-title-lista__content
+{
+	color: white;
+	font-size: 20px;
+	margin: 0 auto;
+	padding: 20px 0;
+	width: 95%;
+}
+
+.container-title-lista__content span
+{
+	padding-right: 10px;
+}
+
+@media (max-width: 765px){
+	.container-lista__content
+	{
+		width: 701px;
+	}
 }
