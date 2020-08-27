@@ -171,7 +171,7 @@ a:visited{
 	width: 40px;
 }
 
-.row-lista:first-child
+.row-lista:first-child, .row-lista-5:first-child
 {
 	background-color: #f2f2f2;
 }
@@ -1394,12 +1394,11 @@ hr.divider-one {
     padding: 15px 35px;
     line-height: 20px;
     border-radius: 7px;
-    background-color: #3b7eff;
+    background-color: black;
 }
 
 .btn-style-four:hover{
     color: rgb(255, 255, 255);
-    background-color:#3b7eff;
 }
 
 /* Btn Style Five */
@@ -10609,6 +10608,12 @@ hr{
 	grid-template-columns: repeat(6, 1fr);
 }
 
+.row-lista-5
+{
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+}
+
 .column-lista
 {
 	align-items: center;
@@ -10642,6 +10647,9 @@ hr{
 
 .container-title-lista__content
 {
+	align-items: center;
+	justify-content: space-between;
+	display: flex;
 	color: white;
 	font-size: 20px;
 	margin: 0 auto;

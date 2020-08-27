@@ -36,19 +36,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- <div class="footer-column col-lg-3 col-md-4 col-sm-12">
-                                <div class="footer-widget links-widget">
-                                    <h2 class="widget-title">Page Links</h2>
-                                    <div class="widget-content">
-                                        <ul class="list">
-                                            <li><a href="#">Cloud Services</a></li>
-                                            <li><a href="#">Shop</a></li>
-                                            <li><a href="#">Contacto</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
 

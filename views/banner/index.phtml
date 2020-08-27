@@ -1,48 +1,72 @@
-<section class="checkout-page" style="padding-top: 30px;">
-    <div class="auto-container">
-        <div class="coupen-outer">
-            <div class="upper-box">
-                <div class="text"><span class="icon flaticon-news"></span> Lista Banners</div>
-                <a href="<?php echo BASE_URL ?>banner/registrar" class="theme-btn btn-style-four">Registrar</a>
+<section class="container-lista">
+    <div class="container-title-lista">
+        <div class="container-title-lista__content">
+            <div>
+                <span class="icon flaticon-news"></span>
+                Lista noticias
             </div>
+            <a href="<?php echo BASE_URL ?>banner/registrar" class="theme-btn btn-style-four">Registrar</a>
         </div>
-        <?php if(!count($this->banners)){ ?>
+    </div>
+
+    <article class="container-lista__content">
+    <?php if(!count($this->banners)){ ?>
             <img class="img-noinfo" src="<?php echo BASE_URL; ?>/public/images/noinfo.png">
         <?php } else{ ?>
-        <div class="col-sm-12">
-            <div class="hstb-pricing-table-holder">
-                <div class="hstb-table">
-                    <div class="row thead">
-                        <div class="col-xs-2 th">#</div>
-                        <div class="col-xs-2 th">Titulo</div>
-                        <div class="col-xs-2 th">Fecha</div>
-                        <!-- <div class="col-xs-2 th">Descripción</div> -->
-                        <div class="col-xs-2 th">Imagen</div>
-                        <div class="col-xs-2 th">Acciones</div>
-                    </div>
-                    <?php foreach ($this->banners as $key => $value) { ?>
-                    <div class="row trow">
-                        <div class="col-xs-2 td"><?php echo $key+1; ?></div>
-                        <div class="col-xs-2 td"><?php echo $value->getTitulo(); ?></div>
-                        <div class="col-xs-2 td"><?php echo $value->getFecha()->format('d/m/Y') ?></div>
-                        <!-- <div class="col-xs-2 td">
-                            Se llevo a cabo el desarrollo de 
-                            la página de PSC World.
-                        </div> -->
-                        <div class="col-xs-2 td">
-                            <a href="post.html"><i class="fas fa-image btn-accion"></i></a>
-                        </div>
-                        <div class="col-xs-2 td">
-                            <!-- <a class="register-button" href="#">Register</a> -->
-                            <a href="<?php echo BASE_URL ?>banners/ver_noticia/<?php echo $value->getId() ?>"><i class="far fa-eye btn-accion"></i></a>
-                            <a href="<?php echo BASE_URL ?>banners/editar/<?php echo $value->getId() ?>"><i class="far fa-edit  btn-accion"></i></a>
-                            <a href="<?php echo BASE_URL ?>banners/eliminar/<?php echo $value->getId() ?>"><i class="far fa-trash-alt  btn-accion btn-rojo "></i> </a>
-                        </div>
-                    </div>
-                    <?php } ?>
+        <div class="row-lista-5">
+            <div class="column-lista">
+                <p>#</p>
+            </div>
+            <div class="column-lista">
+                <p>Título</p>
+            </div>
+            <div class="column-lista">
+                <p>Fecha</p>
+            </div>
+            <div class="column-lista">
+                <p>Imagen</p>
+            </div>
+            <div class="column-lista">
+                <p>Acciones</p>
+            </div>
+        </div>
+        <?php foreach ($this->banners as $key => $value) { ?>
+        <div class="row-lista-5">
+            <div class="column-lista">
+                <p><?php echo $key+1; ?></p>
+            </div>
+            <div class="column-lista">
+                <p><?php echo $value->getTitulo(); ?></p>
+            </div>
+            <div class="column-lista">
+                <p><?php echo $value->getFecha()->format('d/m/Y') ?></p>
+            </div>
+            <div class="column-lista">
+                <div class="box-btn-lista">
+                    <a class="btn-lista btn-black" href="<?php echo BASE_URL ?>">
+                        <i class="fas fa-image btn-accion"></i>
+                    </a>
+                </div>  
+            </div>
+            <div class="column-lista">
+                <div class="box-btn-lista">
+                    <a class="btn-lista btn-black" href="<?php echo BASE_URL ?>banners/ver_noticia/<?php echo $value->getId() ?>">
+                        <i class="far fa-eye"></i>
+                    </a>
+                </div>
+                <div class="box-btn-lista btn-blue">
+                    <a class="btn-lista" href="<?php echo BASE_URL ?>banners/editar/<?php echo $value->getId() ?>">
+                        <i class="far fa-edit"></i>
+                    </a>
+                </div>
+                <div class="box-btn-lista btn-rojo">
+                    <a class="btn-lista" href="<?php echo BASE_URL ?>banners/eliminar/<?php echo $value->getId() ?>">
+                        <i class="far fa-trash-alt"></i> 
+                    </a>
                 </div>
             </div>
         </div>
         <?php } ?>
-    </div>
+        <?php } ?>
+    </article>
 </section>
