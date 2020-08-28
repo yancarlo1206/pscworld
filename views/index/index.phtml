@@ -455,111 +455,29 @@
         </div>
 
         <div class="row">
-            
-            <div class="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-                <div class="inner-box">
-                    <div class="image-box">
-                        <figure class="image">
-                            <a href="<?php echo BASE_URL; ?>noticias/ver_noticia">
-                                <img src="<?php echo BASE_URL; ?>public/images/resource/news-1.jpg" alt="">
-                            </a>
-                        </figure>
-                        <a href="#" class="date">
-                            <i class="far fa-calendar"></i> 
-                            Sep 8, 2020
-                        </a>
-                    </div>
-                    <div class="lower-content">
-                        <a href="<?php echo BASE_URL; ?>noticias/ver_noticia" class="read-more"><i class="flaticon-right-arrow"></i></a>
-                        <h4><a href="<?php echo BASE_URL; ?>noticias/ver_noticia">
-                            Emisión y entraga del CFDI de nóminas: Las dos caras de la moneda.
-                        </a></h4>
-                        <div class="text">
-                            Es importante mencionar que para efectos de la deducción de la nómina, los patrones deberán emitir un CFDI por cada uno de los 
-                        </div>
-                        <div class="post-info">
-                            <div class="post-author">
-                                <img src="<?php echo BASE_URL; ?>public/images/resource/author-thumb.png" alt="" />
-                                admin
-                            </div>
-
-                            <div class="post-option">
-                                <!-- <div class="coments_count"><a href="#"><i class="fa fa-comment"></i>0</a></div> -->
-                                <ul class="social-share">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            
-            <div class="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-                <div class="inner-box">
-                    <div class="image-box">
-                        <figure class="image">
-                            <a href="<?php echo BASE_URL; ?>noticias/ver_noticia">
-                                <img src="<?php echo BASE_URL; ?>public/images/resource/news-1.jpg" alt="">
-                            </a>
-                        </figure>
-                        <a href="#" class="date">
-                            <i class="far fa-calendar"></i> 
-                            Sep 8, 2020
-                        </a>
-                    </div>
-                    <div class="lower-content">
-                        <a href="<?php echo BASE_URL; ?>noticias/ver_noticia" class="read-more"><i class="flaticon-right-arrow"></i></a>
-                        <h4><a href="<?php echo BASE_URL; ?>noticias/ver_noticia">
-                            Emisión y entraga del CFDI de nóminas: Las dos caras de la moneda.
-                        </a></h4>
-                        <div class="text">
-                            Es importante mencionar que para efectos de la deducción de la nómina, los patrones deberán emitir un CFDI por cada uno de los 
-                        </div>
-                        <div class="post-info">
-                            <div class="post-author">
-                                <img src="<?php echo BASE_URL; ?>public/images/resource/author-thumb.png" alt="" />
-                                admin
-                            </div>
-
-                            <div class="post-option">
-                                <!-- <div class="coments_count"><a href="#"><i class="fa fa-comment"></i>0</a></div> -->
-                                <ul class="social-share">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            
+            <?php foreach ($this->noticias as $key => $value) { ?>
             <div class="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
                 <div class="inner-box">
                     <div class="image-box">
                         <figure class="image">
-                            <a href="<?php echo BASE_URL; ?>noticias/ver_noticia">
-                                <img src="<?php echo BASE_URL; ?>public/images/resource/news-3.jpg" alt="">
+                            <a href="<?php echo BASE_URL; ?>noticias/ver_noticia/<?php echo $value->getId(); ?> ">
+                                <img src="<?php echo BASE_URL; ?>public/images/noticias/<?php echo $value->getId() ?>.jpg" alt="">
                             </a>
                         </figure>
                         <a href="#" class="date">
                             <i class="far fa-calendar"></i> 
-                            Sep 8, 2020
+                            <?php echo $value->getFecha()->format('d/m/Y'); ?>
                         </a>
                     </div>
                     <div class="lower-content">
-                        <a href="<?php echo BASE_URL; ?>noticias/ver_noticia" class="read-more">
+                        <a href="<?php echo BASE_URL; ?>noticias/ver_noticia/<?php echo $value->getId(); ?>" class="read-more">
                             <i class="flaticon-right-arrow"></i>
                         </a>
-                        <h4><a href="<?php echo BASE_URL; ?>noticias/ver_noticia">
-                            Emisión y entraga del CFDI de nóminas: Las dos caras de la moneda.
+                        <h4><a href="<?php echo BASE_URL; ?>noticias/ver_noticia/<?php echo $value->getId(); ?>">
+                            <?php echo $value->getTitulo(); ?>
                         </a></h4>
                         <div class="text">
-                            Es importante mencionar que para efectos de la deducción de la nómina, los patrones deberán emitir un CFDI por cada uno de los 
+                            <?php echo $value->getContenido() ?>
                         </div>
                         <div class="post-info">
                             <div class="post-author">
@@ -579,6 +497,7 @@
                     </div>
                 </div>
             </div>
+            <?php } ?>
         </div>
 
         <div class="sec-bottom-text">
