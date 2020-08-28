@@ -26,12 +26,7 @@ class bannerController extends Controller {
                   $upload->image_convert = 'jpg';
                   $upload->process(ROOT . "public" . DS . "images" . DS . "banners" . DS);
                   if($upload->processed) {
-                    /* $thumb = new upload($upload->file_dst_pathname);
-                    $thumb->image_resize = true;
-                    $thumb->image_x = 100;
-                    $thumb->image_y = 70;
-                    $thumb->file_name_body_pre = 'thumb_';
-                    $thumb->process(ROOT . "public" . DS . "img" . DS . "fotos" . DS); */
+                    
                   }else{
                     $this->_baner->delete();
                     echo $upload->error;
@@ -53,6 +48,19 @@ class bannerController extends Controller {
             $this->_banner->getInstance()->setContenido($this->getTexto('contenido'));
             try {
                 $this->_banner->update();
+                if(isset($_FILES['imagen']) && $_FILES['imagen']['name'] != "") {
+                  $fichero = ROOT . "public" . DS . "images" . DS. "banners" . DS. $this->_banner->getInstance()->getId().".jpg";
+                  if (file_exists($fichero)){
+                    unlink($fichero);
+                  }
+                  $this->getLibrary('upload' . DS . 'class.upload');
+                  $upload = new upload($_FILES['imagen']);
+                  $upload->allowed = array('image/*');
+                  $upload->file_new_name_body = $this->_banner->getInstance()->getId();
+                  $upload->image_convert = 'jpg';
+                  $upload->process(ROOT . "public" . DS . "images" . DS . "banners" . DS);
+                  if($upload->processed) { }else{ }
+                }
                 $this->redireccionar('banners/listar/');
             } catch (Exception $e) {
                 echo $e;                

@@ -64,9 +64,22 @@ class noticiasController extends Controller {
         $this->_view->noticia = $this->_noticia->get($noticia);
         if($this->getInt('guardar')){
             $this->_noticia->getInstance()->setTitulo($this->getTexto('titulo'));
-            $this->_noticia->getInstance()->setContenido($this->getTexto('contenido'));
+            $this->_noticia->getInstance()->setContenido($this->getPostParam('editor1'));
             try {
                 $this->_noticia->update();
+                if(isset($_FILES['imagen']) && $_FILES['imagen']['name'] != "") {
+                  $fichero = ROOT . "public" . DS . "images" . DS. "noticias" . DS. $this->_noticia->getInstance()->getId().".jpg";
+                  if (file_exists($fichero)){
+                    unlink($fichero);
+                  }
+                  $this->getLibrary('upload' . DS . 'class.upload');
+                  $upload = new upload($_FILES['imagen']);
+                  $upload->allowed = array('image/*');
+                  $upload->file_new_name_body = $this->_noticia->getInstance()->getId();
+                  $upload->image_convert = 'jpg';
+                  $upload->process(ROOT . "public" . DS . "images" . DS . "noticias" . DS);
+                  if($upload->processed) { }else{ }
+                }
                 $this->redireccionar('noticias/listar/');
             } catch (Exception $e) {
                 echo $e;                
