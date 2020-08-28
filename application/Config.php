@@ -23,6 +23,7 @@ define('HASH_KEY', '4ebz7d533be89');
 	define('DB_HOST_LOCAL', false);	
 }*/
 define('BASE_URL', 'http://localhost/pscworld/');
+// define('BASE_URL', 'http://siaweb.ufps.edu.co/proyectos/pscworld');
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');

@@ -558,7 +558,8 @@
             
             $.ajax({
                 url:"http://localhost/pscworld/login/iniciar/",
-                method:"POST",
+                // url:"http://siaweb.ufps.edu.co/proyectos/pscworld/login/iniciar",
+				method:"POST",
                 data: $(form).serialize(),
                 beforeSend:function(){
                     $('#email-form .response').html('<div class="text-info"><img src="images/icons/preloader.gif"> Loading...</div>');
