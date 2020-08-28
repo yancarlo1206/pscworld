@@ -1394,11 +1394,16 @@ hr.divider-one {
     padding: 15px 35px;
     line-height: 20px;
     border-radius: 7px;
-    background-color: black;
+	background-color: #3b7eff;
 }
 
 .btn-style-four:hover{
     color: rgb(255, 255, 255);
+}
+
+.btn-amarillo-oscuro
+{
+	background-color: #e29702;
 }
 
 /* Btn Style Five */
