@@ -34,7 +34,7 @@
                                 </a>
                             </h4>
                             <div class="text">
-                                <?php echo $value->getContenido(); ?>
+                                <?php echo substr($value->getContenido(),0,300); ?>
                             </div>
                             <a href="<?php echo BASE_URL; ?>noticias/ver_noticia/<?php echo $value->getId(); ?>" class="theme-btn icon-btn-two read-more-btn"><span>Ver más</span></a>
                             <div class="post-info">
