@@ -7,7 +7,8 @@ class noticiasController extends Controller {
     }
     
     public function index() {
-        $this->_view->noticias = $this->_noticia->resultList();
+        // $this->_view->noticias = $this->_noticia->resultList();
+        $this->_view->noticias = $this->_noticia->dql("select n from Entities\Noticias n order by n.id desc",array());
     	$this->_view->titulo = '';
         $this->_view->renderizar('index', 'noticias');
     }
