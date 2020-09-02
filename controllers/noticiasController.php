@@ -27,7 +27,7 @@ class noticiasController extends Controller {
     public function registrar() {
         if($this->getInt('guardar')){
             $this->_noticia->getInstance()->setTitulo($this->getTexto('titulo'));
-            $this->_noticia->getInstance()->setContenido($this->getTexto('contenido'));
+            $this->_noticia->getInstance()->setContenido($this->getPostParam('contenido'));
             $this->_noticia->getInstance()->setFecha(new \DateTime());
             $this->_noticia->getInstance()->setEstado(1);
             try {
