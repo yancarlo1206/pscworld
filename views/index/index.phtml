@@ -137,7 +137,7 @@
             </div>
         </div>
 
-        <div class="sec-bottom-text">Los servicios de PSC World lo ayudaran a tener éxito. <a href="#">Empecemos</a></div>
+        <div class="sec-bottom-text">Los servicios de PSC World lo ayudaran a tener éxito. <a href="<?php echo BASE_URL; ?>contacto">Empecemos</a></div>
     </div>
 </section>
 <!-- End Case Study Section -->
@@ -474,10 +474,11 @@
                             <i class="flaticon-right-arrow"></i>
                         </a>
                         <h4><a href="<?php echo BASE_URL; ?>noticias/ver_noticia/<?php echo $value->getId(); ?>">
-                            <?php echo $value->getTitulo(); ?>
+                            
+                            <?php echo substr($value->getTitulo(),0,50)."..." ?>
                         </a></h4>
                         <div class="text">
-                            <?php echo substr($value->getContenido(),0,300) ?>
+                            <?php echo strip_tags(substr($value->getContenido(),0,300)."..."); ?>
                         </div>
                     </div>
                 </div>

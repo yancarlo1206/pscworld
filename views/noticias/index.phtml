@@ -30,27 +30,14 @@
                         <div class="lower-content">
                             <h4>
                                 <a href="<?php echo BASE_URL; ?>noticias/ver_noticia/<?php echo $value->getId(); ?>">
-                                    <?php echo $value->getTitulo(); ?>
+                                <?php echo substr($value->getTitulo(),0,80)."..." ?>
                                 </a>
                             </h4>
                             <div class="text">
-                                <?php echo substr($value->getContenido(),0,300); ?>
+                                <?php echo strip_tags(substr($value->getContenido(),0,300)."..."); ?>                                
                             </div>
                             <a href="<?php echo BASE_URL; ?>noticias/ver_noticia/<?php echo $value->getId(); ?>" class="theme-btn icon-btn-two read-more-btn"><span>Ver más</span></a>
-                            <!-- <div class="post-info">
-                                <div class="post-author">
-                                    <img src="<?php echo BASE_URL; ?>/public/images/resource/author-thumb.png" alt="" />
-                                    admin
-                                </div>
-
-                                <div class="post-option">
-                                    <ul class="social-share">
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div> -->
+                            
                         </div>
                     </div>
                 </div>
