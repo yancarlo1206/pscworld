@@ -1,0 +1,7 @@
+# Ignores
+
+tmp/
+#application/Config.php
+#libs/reportear.php
+#libs/doctrine/Doctrine.php
+#libs/volante/volante.php

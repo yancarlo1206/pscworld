@@ -6,14 +6,15 @@ class bannerController extends Controller {
     }
 
     public function index() {
-        $this->_view->banners = $this->_banner->resultList();
+      $this->_view->banners = $this->_banner->resultList();
     	$this->_view->titulo = '';
-        $this->_view->renderizar('index');
+      $this->_view->renderizar('index');
     }
 
     public function registrar() {
         if($this->getInt('guardar')){
             $this->_banner->getInstance()->setTitulo($this->getTexto('titulo'));
+            $this->_banner->getInstance()->setUrl($this->getPostParam('url'));
             $this->_banner->getInstance()->setFecha(new \DateTime());
             $this->_banner->getInstance()->setEstado(1);
             try {
@@ -45,7 +46,7 @@ class bannerController extends Controller {
         $this->_view->banner = $this->_banner->get($banner);
         if($this->getInt('guardar')){
             $this->_banner->getInstance()->setTitulo($this->getTexto('titulo'));
-            $this->_banner->getInstance()->setContenido($this->getTexto('contenido'));
+            $this->_banner->getInstance()->setUrl($this->getPostParam('url'));
             try {
                 $this->_banner->update();
                 if(isset($_FILES['imagen']) && $_FILES['imagen']['name'] != "") {
@@ -61,13 +62,13 @@ class bannerController extends Controller {
                   $upload->process(ROOT . "public" . DS . "images" . DS . "banners" . DS);
                   if($upload->processed) { }else{ }
                 }
-                $this->redireccionar('banners/listar/');
+                $this->redireccionar('banner/');
             } catch (Exception $e) {
                 echo $e;                
             }
         }
         $this->_view->titulo = '';
-        $this->_view->renderizar('editar', 'banners', 'editar_banner');
+        $this->_view->renderizar('registrar', 'banners', 'editar_banner');
     }
 }
 ?>
