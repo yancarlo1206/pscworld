@@ -14,9 +14,10 @@ class noticiasController extends Controller {
     }
 
     public function ver_noticia($noticia=null) {
-        $this->_view->noticia = $this->_noticia->get($noticia);
+      $this->_view->noticia = $this->_noticia->get($noticia);
+      $this->_view->noticias = $this->_noticia->dql("select n from Entities\Noticias n order by n.id desc",array());
     	$this->_view->titulo = '';
-        $this->_view->renderizar('ver_noticia', 'noticias');
+      $this->_view->renderizar('ver_noticia', 'noticias');
     }
 
     public function listar() {

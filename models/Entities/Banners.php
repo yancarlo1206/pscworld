@@ -33,6 +33,13 @@ function __construct() {}
     private $titulo;
 
     /**
+     * @var string
+     *
+     * @Column(name="url", type="string", length=200, nullable=true)
+     */
+    private $url;
+
+    /**
      * @var \DateTime
      *
      * @Column(name="fecha", type="datetime", nullable=false)
@@ -91,6 +98,29 @@ function __construct() {}
     public function getTitulo()
     {
         return $this->titulo;
+    }
+
+    /** 
+     * Set url
+     *
+     * @param string $url
+     * @return Banners
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
+    
+        return $this;
+    }
+
+    /**
+     * Get url
+     *
+     * @return string 
+     */
+    public function getUrl()
+    {
+        return $this->url;
     }
 
     /** 

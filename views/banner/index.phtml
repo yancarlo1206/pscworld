@@ -21,11 +21,14 @@
                 <p>Título</p>
             </div>
             <div class="column-lista">
-                <p>Fecha</p>
+                <p>URL</p>
             </div>
             <div class="column-lista">
-                <p>Imagen</p>
+                <p>Fecha</p>
             </div>
+            <!-- <div class="column-lista">
+                <p>Imagen</p>
+            </div> -->
             <div class="column-lista">
                 <p>Acciones</p>
             </div>
@@ -39,15 +42,18 @@
                 <p><?php echo $value->getTitulo(); ?></p>
             </div>
             <div class="column-lista">
-                <p><?php echo $value->getFecha()->format('d/m/Y') ?></p>
+                <p><?php echo $value->getUrl(); ?></p>
             </div>
             <div class="column-lista">
+                <p><?php echo $value->getFecha()->format('d/m/Y') ?></p>
+            </div>
+            <!-- <div class="column-lista">
                 <div class="box-btn-lista">
                     <a class="btn-lista btn-black" href="<?php echo BASE_URL ?>">
                         <i class="fas fa-image btn-accion"></i>
                     </a>
                 </div>  
-            </div>
+            </div> -->
             <div class="column-lista">
                 <div class="box-btn-lista">
                     <a class="btn-lista btn-black" href="<?php echo BASE_URL ?>banners/ver_noticia/<?php echo $value->getId() ?>">
@@ -55,12 +61,12 @@
                     </a>
                 </div>
                 <div class="box-btn-lista btn-blue">
-                    <a class="btn-lista" href="<?php echo BASE_URL ?>banners/editar/<?php echo $value->getId() ?>">
+                    <a class="btn-lista" href="<?php echo BASE_URL ?>banner/editar/<?php echo $value->getId() ?>">
                         <i class="far fa-edit"></i>
                     </a>
                 </div>
                 <div class="box-btn-lista btn-rojo">
-                    <a class="btn-lista" href="<?php echo BASE_URL ?>banners/eliminar/<?php echo $value->getId() ?>">
+                    <a class="btn-lista" href="<?php echo BASE_URL ?>banner/eliminar/<?php echo $value->getId() ?>">
                         <i class="far fa-trash-alt"></i> 
                     </a>
                 </div>

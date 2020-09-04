@@ -74,26 +74,15 @@
                             <div class="sidebar-widget latest-news">
                                 <div class="sidebar-title"><h3>Noticias recientes</h3></div>
                                 <div class="widget-content">
+                                    <?php foreach ($this->noticias as $key => $value) { ?>
+                                    <?php if($key == 3){ break; } ?>
                                     <article class="post">
-                                        <figure class="thumb"><img src="<?php echo BASE_URL; ?>/public/images/resource/post-thumb-1.jpg" alt=""></figure>
-                                        <h5>Fuerza laboral</h5>
+                                        <figure class="thumb"><img src="<?php echo BASE_URL; ?>/public/images/noticias/<?php echo $value->getId() ?>.jpg" alt=""></figure>
+                                        <h5><?php echo $value->getTitulo() ?></h5>
                                         <div class="post-info">Sep 09 2020</div>
-                                        <a href="<?php echo BASE_URL; ?>noticias/ver_noticia" class="overlay-link"></a>
+                                        <a href="<?php echo BASE_URL; ?>noticias/ver_noticia/<?php echo $value->getId() ?>" class="overlay-link"></a>
                                     </article>
-
-                                    <article class="post">
-                                        <figure class="thumb"><img src="<?php echo BASE_URL; ?>/public/images/resource/post-thumb-2.jpg" alt=""></figure>
-                                        <h5>Una llamada para ti</h5>
-                                        <div class="post-info">Sep 09 2020</div>
-                                        <a href="<?php echo BASE_URL; ?>noticias/ver_noticia" class="overlay-link"></a>
-                                    </article>
-
-                                    <article class="post">
-                                        <figure class="thumb"><img src="<?php echo BASE_URL; ?>/public/images/resource/post-thumb-3.jpg" alt=""></figure>
-                                        <h5>Compromiso en nuestro equipo</h5>
-                                        <div class="post-info">Sep 09 2020</div>
-                                        <a href="<?php echo BASE_URL; ?>noticias/ver_noticia" class="overlay-link"></a>
-                                    </article>
+                                    <?php } ?>
                                 </div>
                             </div>
 
