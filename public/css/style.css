@@ -10610,17 +10610,22 @@ hr{
 .row-lista
 {
 	display: grid;
-	grid-template-columns: repeat(6, 1fr);
+	/* grid-template-columns: repeat(6, 1fr); */
+	/* grid-template-columns: repeat(auto-fill,minmax(6,1fr)); */
+    grid-template-columns: repeat(auto-fill,minmax(16.6666666667%,1fr));
+	grid-gap: 0;
 }
 
 .row-lista-5
 {
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
+	/* grid-template-columns: repeat(5, 1fr); */
+	grid-template-columns: repeat(auto-fill,minmax(20%,1fr));
 }
 
 .column-lista
 {
+	overflow: hidden;
 	align-items: center;
 	padding: 20px 0;
 	border-bottom: 1px solid gray;
@@ -10673,6 +10678,12 @@ hr{
 		margin-right: auto;
 		margin-left: auto;
 		width: 85%;
+	}
+
+	.row-lista
+	{
+		display: flex;
+		flex-direction: column;
 	}
 
 	.row-lista-5

@@ -48,6 +48,7 @@
 
 .box-modalimg
 {
+    width: 100%;
     display: flex; 
     flex-direction: column; 
     text-align: center;
@@ -112,6 +113,9 @@
 
 .modal__content
 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
     border-radius: 10px;
     background-color: white;
     margin: 0 auto;
@@ -246,6 +250,19 @@
     }
 }
 
+.imagenDModal
+{
+    width: 100%;
+}
+
+.imagenDModal-noticias
+{
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
+}
+
 @media (max-width: 700px)
 {
     .modalimg__content{
@@ -256,4 +273,9 @@
     {
         width: 100%;
     }
+}
+
+.box-modalimg-noticias
+{
+    height: 532px;
 }

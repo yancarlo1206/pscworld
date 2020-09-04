@@ -30,7 +30,7 @@
     <div class="modalimg" style="visibility: hidden;">
         <div class="modal__content modalimg__content">
             <div class="box-modalimg">
-                <img src="<?php echo BASE_URL; ?>public/images/acreditacion.jpg">
+                <img class="imagenDModal" src="<?php echo BASE_URL; ?>public/images/acreditacion.jpg">
                 <i class="fas fa-times-circle cerrarimg"></i>
             </div>
         </div>

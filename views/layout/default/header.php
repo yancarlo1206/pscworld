@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title><?php echo $this->titulo; ?></title>
     <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>public/css/modal.css">
     <link href="<?php echo BASE_URL; ?>public/css/bootstrap.css" rel="stylesheet">
     <link href="<?php echo BASE_URL; ?>public/css/style.css" rel="stylesheet">
     <link href="<?php echo BASE_URL; ?>public/css/vectorcss.css" rel="stylesheet">
@@ -20,11 +21,8 @@
     <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
     <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 </head>
-
 <body>
-
 <div class="page-wrapper">
-    
     <!-- Main Header-->
     <header class="main-header header-style-four">
 
@@ -78,9 +76,7 @@
                     </nav>
                     <!-- Main Menu End-->
                 </div>
-
                 <div class="outer-box">
-
                     <div class="service_wrapper">
                         <span class="icon flaticon-whatsapp"></span> 
                         <p>¿Tiene alguna pregunta?</p>

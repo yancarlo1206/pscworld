@@ -1,3 +1,14 @@
+<div class="modalimg" style="visibility: hidden;">
+    <div class="modal__content modalimg__content">
+        <div class="box-modalimg box-modalimg-noticias">
+        <?php foreach ($this->banners as $key => $value) { ?>
+            <img class="imagenDModal-noticias" src="<?php echo BASE_URL; ?>/public/images/banners/<?php echo $value->getId() ?>.jpg" alt="">
+            <i class="fas fa-times-circle cerrarimg"></i>
+        </div>
+        <?php } ?>
+    </div>
+</div>
+
 <section class="container-lista">
     <div class="container-title-lista">
         <div class="container-title-lista__content">
@@ -13,7 +24,7 @@
     <?php if(!count($this->banners)){ ?>
             <img class="img-noinfo" src="<?php echo BASE_URL; ?>/public/images/noinfo.png">
         <?php } else{ ?>
-        <div class="row-lista-5">
+        <div class="row-lista">
             <div class="column-lista">
                 <p>#</p>
             </div>
@@ -27,11 +38,14 @@
                 <p>Fecha</p>
             </div>
             <div class="column-lista">
+                <p>Imagen</p>
+            </div>
+            <div class="column-lista">
                 <p>Acciones</p>
             </div>
         </div>
         <?php foreach ($this->banners as $key => $value) { ?>
-        <div class="row-lista-5">
+        <div class="row-lista">
             <div class="column-lista">
                 <p><?php echo $key+1; ?></p>
             </div>
@@ -45,6 +59,14 @@
             </div>
             <div class="column-lista">
                 <p><?php echo $value->getFecha()->format('d/m/Y') ?></p>
+            </div>
+
+            <div class="column-lista">
+                <div class="box-btn-lista">
+                    <a class="abririmg btn-lista btn-black" href="<?php echo BASE_URL ?>">
+                        <i class="fas fa-image btn-accion"></i>
+                    </a>
+                </div>
             </div>
            
             <div class="column-lista">
