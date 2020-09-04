@@ -26,9 +26,6 @@
             <div class="column-lista">
                 <p>Fecha</p>
             </div>
-            <!-- <div class="column-lista">
-                <p>Imagen</p>
-            </div> -->
             <div class="column-lista">
                 <p>Acciones</p>
             </div>
@@ -42,18 +39,14 @@
                 <p><?php echo $value->getTitulo(); ?></p>
             </div>
             <div class="column-lista">
-                <p><?php echo $value->getUrl(); ?></p>
+                <p>
+                    <?php echo substr($value->getUrl(),0,20)."..." ?>
+                </p>
             </div>
             <div class="column-lista">
                 <p><?php echo $value->getFecha()->format('d/m/Y') ?></p>
             </div>
-            <!-- <div class="column-lista">
-                <div class="box-btn-lista">
-                    <a class="btn-lista btn-black" href="<?php echo BASE_URL ?>">
-                        <i class="fas fa-image btn-accion"></i>
-                    </a>
-                </div>  
-            </div> -->
+           
             <div class="column-lista">
                 <div class="box-btn-lista">
                     <a class="btn-lista btn-black" href="<?php echo BASE_URL ?>banners/ver_noticia/<?php echo $value->getId() ?>">
