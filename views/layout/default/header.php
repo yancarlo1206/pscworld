@@ -94,13 +94,6 @@
                     </nav>
                     <!-- Main Menu End-->
                 </div>
-                <div class="outer-box">
-                    <div class="service_wrapper">
-                        <span class="icon flaticon-whatsapp"></span> 
-                        <p>¿Tiene alguna pregunta?</p>
-                        <a href="tel:525553396600"><h4>+52 55 5339 6600</h4></a>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -138,22 +131,6 @@
                 <nav class="menu-box">
                     <div class="nav-logo"><a href="<?php echo BASE_URL; ?>"><img src="<?php echo BASE_URL; ?>public/images/logo-5.png" alt="" title="" ></a></div><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
                 </nav>
-
-                <?php if(!Session::get('autenticado')){ ?>
-                    <div class="menu-search">
-                        <a href="<?php echo BASE_URL; ?>login">
-                            <i class="fa flaticon-user"></i>
-                            Iniciar sesión
-                        </a>
-                        </div>
-                <?php }else{ ?>
-                    <div class="menu-search">
-                        <a href="<?php echo BASE_URL; ?>login/cerrar">
-                            <i class="fa flaticon-arrow-pointing-to-right"></i>
-                            Cerrar sesión
-                        </a>
-                        </div>
-                <?php } ?>
             </div>
         </div><!-- End Mobile Menu -->
     </header>

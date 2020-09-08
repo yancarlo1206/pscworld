@@ -60,7 +60,7 @@ class View {
         $menu[] = array(
             'id' => 'nom_151',
             'titulo' => 'Time Stamp',
-            'enlace' => BASE_URL . 'servicios/nom_151/'
+            'enlace' => BASE_URL . 'servicios/estampado_tiempo/'
             );
         // $menu[] = array(
         //         'id' => 'doc2sign',
@@ -100,18 +100,19 @@ class View {
                     array(
                         'id' => 'estampado_tiempo',
                         'titulo' => 'autosign',
-                        'enlace' => BASE_URL . 'servicios/estampado_tiempo/'
-                    ),
-                    array(
-                        'id' => 'certificado_ssl',
-                        'titulo' => 'Certificados SSL',
-                        'enlace' => BASE_URL . 'servicios/certificado_ssl/'
-                    ),
-                    array(
-                        'id' => 'nom_151',
-                        'titulo' => 'Nom 151',
-                        'enlace' => BASE_URL . 'servicios/nom_151/'
+                        'enlace' => BASE_URL . 'au2sign/'
                     )
+                    // ,
+                    // array(
+                    //     'id' => 'certificado_ssl',
+                    //     'titulo' => 'Certificados SSL',
+                    //     'enlace' => BASE_URL . 'servicios/certificado_ssl/'
+                    // ),
+                    // array(
+                    //     'id' => 'nom_151',
+                    //     'titulo' => 'Nom 151',
+                    //     'enlace' => BASE_URL . 'servicios/nom_151/'
+                    // )
                 )
             );
 
