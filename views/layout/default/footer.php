@@ -68,6 +68,29 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="cont-info-footer">
+                                    <div class="f-ac">
+                                        <a class="txt-white f-ac" href="mailto:soporte@pscworld.com" target="_blank">
+                                            <i class="fa fa-envelope ico-info-footer"></i>
+                                            soporte@pscworld.com
+                                        </a>
+                                    </div>
+                                    <div class="f-ac">
+                                        <p class="txt-white f-as">
+                                            <i class="fa fa-map-marker-alt ico-info-footer"></i>
+                                            Avenida Patriotismo 48-6, Escandón I Secc, 
+                                            Miguel Hidalgo, 11800 Ciudad de México, CDMX
+                                        </p>
+                                    </div>
+                                    <div class="f-ac">
+                                        <a class="txt-white f-ac" href="tel:525553396600" target="_blank">
+                                            <i class="fa fa-phone ico-info-footer"></i>
+                                            +52 55 5339 6600
+                                        </a>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -77,19 +100,11 @@
             <!-- Call Us -->
             <div class="call-us">        
                 <div class="service-num">
-                    <a href="mailto:soporte@pscworld.com" target="_blank">
+                    <a href="mailto:info@pscworld.com" target="_blank">
                         <i class="fa fa-envelope"></i>
                         info@pscworld.com
                     </a>
                 </div>
-                <div class="service-num">
-                    <a href="#">
-                        <i class="fa fa-map-marker-alt"></i>
-                        Avenida Patriotismo 48-6, Escandón I Secc, <br>
-                        Miguel Hidalgo, 11800 Ciudad de México, CDMX
-                    </a>
-                </div>
-                <div class="service-num"><a href="#"><i class="fa fa-phone"></i>+52 55 5339 6600</a></div>
                 <div class="social-link">
                     <a target="_blank" href="https://www.facebook.com/PSC-World-SA-de-CV-104638751341047"><i class="fab fa-facebook-f"></i></a>
                     <a target="_blank" href="https://www.linkedin.com/company/psc-world/?viewAsMember=true"><i class="fab fa-linkedin-in"></i></a>
