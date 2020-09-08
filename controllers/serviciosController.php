@@ -25,6 +25,11 @@ class serviciosController extends Controller {
         $this->_view->renderizar('nom_151', 'servicios', 'nom_151');
     }
 
+    public function certificado_nivel_psc(){
+        $this->_view->titulo = 'Nom 151';
+        $this->_view->renderizar('certificado_nivel_psc', 'servicios', 'nom_151');
+    }
+
 }
 
 ?>
