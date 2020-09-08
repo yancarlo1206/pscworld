@@ -10,6 +10,21 @@ class doc2signController extends Controller {
         $this->_view->renderizar('index', 'doc2sign');
     }
 
+    public function contrato() {
+    	$this->_view->titulo = '';
+        $this->_view->renderizar('avaluo', 'doc2sign');
+    }
+
+    public function avaluo() {
+    	$this->_view->titulo = '';
+        $this->_view->renderizar('contrato', 'doc2sign');
+    }
+
+    public function nomina() {
+    	$this->_view->titulo = '';
+        $this->_view->renderizar('nomina', 'doc2sign');
+    }
+
 }
 
 ?>
