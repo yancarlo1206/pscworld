@@ -33,7 +33,7 @@ class View {
                         array(
                             'id' => 'firma_digital',
                             'titulo' => 'Certificados nivel PSC',
-                            'enlace' => BASE_URL . 'doc2sign/'
+                            'enlace' => BASE_URL . 'servicios/certificado_nivel_psc'
                         ),
                         // array(
                         //     'id' => 'estampado_tiempo',
@@ -77,25 +77,26 @@ class View {
                     array(
                         'id' => 'firma_digital',
                         'titulo' => 'doc2sign',
-                        'enlace' => BASE_URL . 'doc2sign/',
-                        'submenutres' =>
-                            array(
-                                array(
-                                    'id' => 'contratos',
-                                    'titulo' => 'Contratos',
-                                    'enlace' => BASE_URL . 'doc2sign/'
-                                ),
-                                array(
-                                    'id' => 'avaluos',
-                                    'titulo' => 'Avaluos',
-                                    'enlace' => BASE_URL . 'doc2sign/'
-                                ),
-                                array(
-                                    'id' => 'nomina',
-                                    'titulo' => 'Nomina',
-                                    'enlace' => BASE_URL . 'doc2sign/'
-                                )
-                            )
+                        'enlace' => BASE_URL . 'doc2sign/'
+                        // ,
+                        // 'submenutres' =>
+                        //     array(
+                        //         array(
+                        //             'id' => 'contratos',
+                        //             'titulo' => 'Contratos',
+                        //             'enlace' => BASE_URL . 'doc2sign/'
+                        //         ),
+                        //         array(
+                        //             'id' => 'avaluos',
+                        //             'titulo' => 'Avaluos',
+                        //             'enlace' => BASE_URL . 'doc2sign/'
+                        //         ),
+                        //         array(
+                        //             'id' => 'nomina',
+                        //             'titulo' => 'Nomina',
+                        //             'enlace' => BASE_URL . 'doc2sign/'
+                        //         )
+                        //     )
                     ),
                     array(
                         'id' => 'estampado_tiempo',
