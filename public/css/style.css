@@ -126,7 +126,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	margin: 0 auto;
-	width: 550px;
+	width: 750px;
 }
 
 @media (max-width: 765px){
@@ -10610,8 +10610,6 @@ hr{
 .row-lista
 {
 	display: grid;
-	/* grid-template-columns: repeat(6, 1fr); */
-	/* grid-template-columns: repeat(auto-fill,minmax(6,1fr)); */
     grid-template-columns: repeat(auto-fill,minmax(16.6666666667%,1fr));
 	grid-gap: 0;
 }

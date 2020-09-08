@@ -46,27 +46,27 @@
                 <div class="top-left">
                     <ul class="contact-list clearfix">
                         <li><a href="mailto:soporte@pscworld.com" target="_blank"><i class="fa fa-envelope"></i>soporte@pscworld.com</a></li>
-                        <li>
+                        <!-- <li>
                             <i class="fa fa-map-marker-alt"></i>
                             Avenida Patriotismo 48-6, Escandón I Secc, 
                             Miguel Hidalgo, 11800 Ciudad de México, CDMX
-                        </li>
-                        <li><a class="abririmg" href=""><i class="fa flaticon-medal"></i>Acreditación</a></li>
+                        </li> -->
+                        <li><a class="abririmg" href=""><i class="fa flaticon-medal"></i>Acreditación con PSC</a></li>
                         <?php if(!Session::get('autenticado')){ ?>
-                            <li><a href="<?php echo BASE_URL; ?>login"><i class="fa flaticon-user"></i>Iniciar Sesión</a></li>
+                            <li><a href="https://www.doc2sign.com/" target="_blank"><i class="fa flaticon-user"></i>Iniciar Sesión en doc2sign</a></li>
                         <?php }else{ ?>
                             <li><a href="<?php echo BASE_URL; ?>login/cerrar"><i class="fa flaticon-arrow-pointing-to-right"></i>Cerrar Sesión</a></li>
                         <?php } ?>
                             
                     </ul>
                 </div>
-                <div class="top-right">
+                <!-- <div class="top-right">
                     <ul class="social-icon-one">
                         <li><a target="_blank" href="https://www.facebook.com/PSC-World-SA-de-CV-104638751341047"><span class="fab fa-facebook-f"></span></a></li>
                         <li><a target="_blank" href="https://www.linkedin.com/company/psc-world/?viewAsMember=true"><span class="fab fa-linkedin-in"></span></a></li>
                         <li><a target="_blank" href="https://twitter.com/psc_cv"><span class="fab flaticon-twitter"></span></a></li>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </div>
         <!-- End Header Top -->

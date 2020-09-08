@@ -6,18 +6,29 @@
                     <div class="big-column col-xl-8 col-lg-12 col-md-12">
                         <div class="row">
                             <!--Footer Column-->
-                            <div class="footer-column col-lg-3 col-md-12 col-sm-12">
-                                <div class="logo"><a href="#"><img src="<?php echo BASE_URL; ?>/public/images/logo.png" alt=""></a></div>
-                            </div>
-
-                            <div class="footer-column col-lg-3 col-md-4 col-sm-12">
+                            <div class="footer-column col-lg-4 col-md-4 col-sm-12">
                                 <div class="footer-widget links-widget">
-                                    <h2 class="widget-title">Certificación</h2>
+                                    <h2 class="widget-title">Acreditación</h2>
                                     <div class="widget-content">
                                         <ul class="list">
-                                            <li><a href="certificadosSSL.html">Certificado SSL</a></li>
-                                            <li><a href="nom151.html">Constancia NOM-151</a></li>
-                                            <li><a href="doc2sign.html">Doc2sign</a></li>
+                                            <li style="padding-bottom: 20px"><a href="#">Políticas del servicio</a></li>
+                                            <li style="padding-bottom: 20px"><a href="#">Emisión de certificados digitales de Firma Electrónica Avanzada</a></li>
+                                            <li style="padding-bottom: 20px"><a href="#">Emisión de constancias de conservación de mensajes de datos</a></li>
+                                            <li style="padding-bottom: 20px"><a href="">Emisión de sellos digitales de tiempo</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="footer-column col-lg-4 col-md-4 col-sm-12">
+                                <div class="footer-widget links-widget">
+                                    <h2 class="widget-title">Acreditación</h2>
+                                    <div class="widget-content">
+                                        <ul class="list">
+                                            <li style="padding-bottom: 20px"><a href="#">Declaración de Practicas del servicio</a></li>
+                                            <li style="padding-bottom: 20px"><a href="#">Emisión de certificados digitales de Firma Electrónica Avanzada</a></li>
+                                            <li style="padding-bottom: 20px"><a href="#">Emisión de constancias de conservación de mensajes de datos</a></li>
+                                            <li style="padding-bottom: 20px"><a href="#">Emisión de sellos digitales de tiempo</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -28,10 +39,11 @@
                                     <h2 class="widget-title">Conócenos</h2>
                                     <div class="widget-content">
                                         <ul class="list">
-                                            <li><a href="servicios.html">Servicios</a></li>
-                                            <li><a href="noticias.html">Noticias</a></li>
-                                            <li><a href="contact.html">Contacto</a></li>
-                                            <li><a href="terminosCondiciones.html">Terminos y condiciones</a></li>
+                                            <li><a href="#">Servicios</a></li>
+                                            <li><a href="#">Soluciones</a></li>
+                                            <li><a href="#">Blog</a></li>
+                                            <li><a href="#">Contacto</a></li>
+                                            <li><a href="#">Aviso de privacidad </a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -43,7 +55,7 @@
                         <div class="row">
                             <div class="footer-column col-lg-12 col-md-12 col-sm-12">
                                 <div class="footer-widget links-widget">
-                                    <h2 class="widget-title">Subscribete</h2>
+                                    <h2 class="widget-title">¿Quieres que te contáctenos?</h2>
                                     <div class="widget-content">
                                         <div class="newsletter-form">
                                             <form method="post" action="#" id="subscribe-form">
@@ -63,7 +75,20 @@
             </div>
 
             <!-- Call Us -->
-            <div class="call-us">
+            <div class="call-us">        
+                <div class="service-num">
+                    <a href="mailto:soporte@pscworld.com" target="_blank">
+                        <i class="fa fa-envelope"></i>
+                        info@pscworld.com
+                    </a>
+                </div>
+                <div class="service-num">
+                    <a href="#">
+                        <i class="fa fa-map-marker-alt"></i>
+                        Avenida Patriotismo 48-6, Escandón I Secc, <br>
+                        Miguel Hidalgo, 11800 Ciudad de México, CDMX
+                    </a>
+                </div>
                 <div class="service-num"><a href="#"><i class="fa fa-phone"></i>+52 55 5339 6600</a></div>
                 <div class="social-link">
                     <a target="_blank" href="https://www.facebook.com/PSC-World-SA-de-CV-104638751341047"><i class="fab fa-facebook-f"></i></a>

@@ -19,44 +19,84 @@ class View {
     public function renderizar($vista, $item = false, $subItem = false) {
         $menu = array();
 
-        $menu[] = array(
-                'id' => 'inicio',
-                'titulo' => 'Inicio',
-                'enlace' => BASE_URL
-                );
+        // $menu[] = array(
+        //         'id' => 'inicio',
+        //         'titulo' => 'Inicio',
+        //         'enlace' => BASE_URL
+        //         );
         $menu[] = array(
                 'id' => 'servicios',
-                'titulo' => 'Servicios',
+                'titulo' => 'Certificados Digitales',
                 'enlace' => BASE_URL . 'servicios/',
                 'submenu' => 
                     array(
                         array(
                             'id' => 'firma_digital',
-                            'titulo' => 'Firma Digital Electronica',
+                            'titulo' => 'Certificados nivel PSC',
                             'enlace' => BASE_URL . 'doc2sign/'
                         ),
-                        array(
-                            'id' => 'estampado_tiempo',
-                            'titulo' => 'Estampado de Tiempo',
-                            'enlace' => BASE_URL . 'servicios/estampado_tiempo/'
-                        ),
+                        // array(
+                        //     'id' => 'estampado_tiempo',
+                        //     'titulo' => 'Estampado de Tiempo',
+                        //     'enlace' => BASE_URL . 'servicios/estampado_tiempo/'
+                        // ),
                         array(
                             'id' => 'certificado_ssl',
                             'titulo' => 'Certificados SSL',
                             'enlace' => BASE_URL . 'servicios/certificado_ssl/'
-                        ),
-                        array(
-                            'id' => 'nom_151',
-                            'titulo' => 'Nom 151',
-                            'enlace' => BASE_URL . 'servicios/nom_151/'
                         )
+                        // array(
+                        //     'id' => 'nom_151',
+                        //     'titulo' => 'Nom 151',
+                        //     'enlace' => BASE_URL . 'servicios/nom_151/'
+                        // )
                     )
                 );
         $menu[] = array(
-                'id' => 'doc2sign',
-                'titulo' => 'Doc2sign',
-                'enlace' => BASE_URL . 'doc2sign/'
-                );
+            'id' => 'nom_151',
+            'titulo' => 'NOM-151',
+            'enlace' => BASE_URL . 'servicios/nom_151/'
+            );
+        $menu[] = array(
+            'id' => 'nom_151',
+            'titulo' => 'Time Stamp',
+            'enlace' => BASE_URL . 'servicios/nom_151/'
+            );
+        // $menu[] = array(
+        //         'id' => 'doc2sign',
+        //         'titulo' => 'doc2sign',
+        //         'enlace' => BASE_URL . 'doc2sign/'
+        //         );
+            
+        $menu[] = array(
+            'id' => 'servicios',
+            'titulo' => 'Firma Digital',
+            'enlace' => BASE_URL . 'servicios/',
+            'submenu' =>
+                array(
+                    array(
+                        'id' => 'firma_digital',
+                        'titulo' => 'doc2sign',
+                        'enlace' => BASE_URL . 'doc2sign/'
+                    ),
+                    array(
+                        'id' => 'estampado_tiempo',
+                        'titulo' => 'autosign',
+                        'enlace' => BASE_URL . 'servicios/estampado_tiempo/'
+                    ),
+                    array(
+                        'id' => 'certificado_ssl',
+                        'titulo' => 'Certificados SSL',
+                        'enlace' => BASE_URL . 'servicios/certificado_ssl/'
+                    ),
+                    array(
+                        'id' => 'nom_151',
+                        'titulo' => 'Nom 151',
+                        'enlace' => BASE_URL . 'servicios/nom_151/'
+                    )
+                )
+            );
+
         if(Session::get('autenticado')){
             $menu[] = array(
                 'id' => 'noticias',
@@ -79,13 +119,13 @@ class View {
         }else{
             $menu[] = array(
                 'id' => 'noticias',
-                'titulo' => 'Noticias',
+                'titulo' => 'Blog',
                 'enlace' => BASE_URL . 'noticias/'
                 );  
         }
         $menu[] = array(
                 'id' => 'contacto',
-                'titulo' => 'Contacto',
+                'titulo' => 'Contáctanos',
                 'enlace' => BASE_URL . 'contacto/'
                 );
 
