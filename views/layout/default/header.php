@@ -61,11 +61,29 @@
                                                 <?php if($_layoutParams['subItem'] == $value_sub['id']){
                                                     $currentSub = 'current';
                                                 } ?>
-                                                <li class='<?php echo $currentSub; ?>'>
-                                                    <a href="<?php echo $value_sub['enlace']; ?>">
-                                                        <?php echo $value_sub['titulo']; ?>
-                                                    </a>
-                                                </li>   
+                                                <?php $classTres = ''; ?>
+                                                    <?php if(isset($value_sub['submenutres'])){ 
+                                                            $classTres='dropdown';
+                                                            //$titulo = '<span>'.$value['titulo'].'</span>';
+                                                        } ?>
+                                                    <li class='<?php echo $classTres; ?>'>
+                                                        <a href="<?php echo $value_sub['enlace']; ?>"><?php echo $value_sub['titulo']; ?></a>
+                                                        <?php if(isset($value_sub['submenutres'])){ ?>
+                                                            <ul>  
+                                                            <?php foreach ($value_sub['submenutres'] as $key_tres => $value_tres) { ?>
+                                                                <?php $currentSubTres = ''; ?>
+                                                                <?php if($_layoutParams['subItem'] == $value_tres['id']){
+                                                                    $currentSubTres = 'current';
+                                                                } ?>
+                                                                <li class='<?php echo $currentSubTres; ?>'>
+                                                                    <a href="<?php echo $value_tres['enlace']; ?>">
+                                                                        <?php echo $value_tres['titulo']; ?>
+                                                                    </a>
+                                                                </li>   
+                                                            <?php } ?>
+                                                            </ul>
+                                                        <?php } ?>
+                                                    </li>   
                                             <?php } ?>
                                             </ul>
                                         <?php } ?>
