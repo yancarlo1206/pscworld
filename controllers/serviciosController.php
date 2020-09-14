@@ -7,12 +7,12 @@ class serviciosController extends Controller {
     
     public function index() {
     	$this->_view->titulo = '';
-        $this->_view->renderizar('index', '');
+        $this->_view->renderizar('index', 'servicios');
     }    
 
     public function estampado_tiempo(){
     	$this->_view->titulo = 'Estampado de Tiempo';
-        $this->_view->renderizar('estampado_tiempo', 'servicios', 'estampado_tiempo');
+        $this->_view->renderizar('estampado_tiempo', 'estampado_tiempo');
     }
 
     public function certificado_ssl(){
@@ -22,12 +22,12 @@ class serviciosController extends Controller {
 
     public function nom_151(){
     	$this->_view->titulo = 'Nom 151';
-        $this->_view->renderizar('nom_151', 'servicios', 'nom_151');
+        $this->_view->renderizar('nom_151', 'nom_151', 'nom_151');
     }
 
     public function certificado_nivel_psc(){
         $this->_view->titulo = 'Nom 151';
-        $this->_view->renderizar('certificado_nivel_psc', 'servicios', 'nom_151');
+        $this->_view->renderizar('certificado_nivel_psc', 'servicios', 'certificado_nivel_psc');
     }
 
 }

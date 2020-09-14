@@ -31,9 +31,9 @@ class View {
                 'submenu' => 
                     array(
                         array(
-                            'id' => 'firma_digital',
-                            'titulo' => 'Certificados nivel PSC',
-                            'enlace' => BASE_URL . 'servicios/certificado_nivel_psc'
+                            'id' => 'certificado_nivel_psc',
+                            'titulo' => 'Certificados Nivel PSC',
+                            'enlace' => BASE_URL . 'servicios/certificado_nivel_psc/'
                         ),
                         // array(
                         //     'id' => 'estampado_tiempo',
@@ -58,7 +58,7 @@ class View {
             'enlace' => BASE_URL . 'servicios/nom_151/'
             );
         $menu[] = array(
-            'id' => 'nom_151',
+            'id' => 'estampado_tiempo',
             'titulo' => 'Time Stamp',
             'enlace' => BASE_URL . 'servicios/estampado_tiempo/'
             );
@@ -69,13 +69,13 @@ class View {
         //         );
             
         $menu[] = array(
-            'id' => 'servicios',
+            'id' => 'servicios_firmas',
             'titulo' => 'Firma Digital',
             'enlace' => BASE_URL . 'servicios/',
             'submenu' =>
                 array(
                     array(
-                        'id' => 'firma_digital',
+                        'id' => 'doc2sign',
                         'titulo' => 'doc2sign',
                         'enlace' => BASE_URL . 'doc2sign/'
                         // ,
@@ -99,7 +99,7 @@ class View {
                         //     )
                     ),
                     array(
-                        'id' => 'estampado_tiempo',
+                        'id' => 'au2sign',
                         'titulo' => 'autosign',
                         'enlace' => BASE_URL . 'au2sign/'
                     )
