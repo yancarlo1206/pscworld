@@ -157,20 +157,8 @@ class View {
                 );
         }
 
-        if(Session::get('autenticado')){
-
-        }
         if(Session::accesoView('usuario')){
             
-        }
-        if(Session::accesoView('administrador')){
-            
-        }
-        if(Session::accesoView('consultorio')){
-            
-        }
-        if(Session::get('autenticado')){
-             
         }
 
         $js = array();

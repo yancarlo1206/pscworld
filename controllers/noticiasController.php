@@ -21,7 +21,7 @@ class noticiasController extends Controller {
     }
 
     public function listar() {
-        if(Session::get('autenticado')){
+        if(!Session::get('autenticado')){
             $this->redireccionar();
         }
         $this->_view->noticias = $this->_noticia->resultList();

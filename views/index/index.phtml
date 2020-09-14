@@ -483,11 +483,18 @@
                             <i class="flaticon-right-arrow"></i>
                         </a>
                         <h4><a href="<?php echo BASE_URL; ?>noticias/ver_noticia/<?php echo $value->getId(); ?>">
-                            
-                            <?php echo substr($value->getTitulo(),0,50)."..." ?>
+                            <?php if(strlen($value->getTitulo()) <= 50){ ?>
+                                <?php echo $value->getTitulo(); ?>    
+                            <?php }else{ ?>
+                                <?php echo substr($value->getTitulo(),0,50)." ..." ?>
+                            <?php } ?>
                         </a></h4>
                         <div class="text">
-                            <?php echo strip_tags(substr($value->getContenido(),0,300)."..."); ?>
+                            <?php if(strlen($value->getContenido()) <= 300){ ?>
+                                <?php echo strip_tags($value->getContenido()); ?>    
+                            <?php }else{ ?>
+                                <?php echo strip_tags(substr($value->getContenido(),0,300))."..." ?>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
