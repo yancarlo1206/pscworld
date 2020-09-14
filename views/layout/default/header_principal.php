@@ -24,6 +24,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+<script>var BASE={url: '<?php echo BASE_URL; ?>'}</script>
 </head>
 
 <body>
@@ -46,11 +47,9 @@
                 <div class="top-left">
                     <ul class="contact-list clearfix">
                         <li><a href="mailto:soporte@pscworld.com" target="_blank"><i class="fa fa-envelope"></i>soporte@pscworld.com</a></li>
-                        
                         <li><a class="abririmg" href=""><i class="fa flaticon-medal"></i>Acreditación con PSC</a></li>
-                        
+                        <li><a href="https://www.doc2sign.com/" target="_blank"><i class="fa flaticon-user"></i>Iniciar Sesión en doc2sign</a></li>
                         <?php if(!Session::get('autenticado')){ ?>
-                            <li><a href="https://www.doc2sign.com/" target="_blank"><i class="fa flaticon-user"></i>Iniciar Sesión en doc2sign</a></li>
                         <?php }else{ ?>
                             <li><a href="<?php echo BASE_URL; ?>login/cerrar"><i class="fa flaticon-arrow-pointing-to-right"></i>Cerrar Sesión</a></li>
                         <?php } ?>    

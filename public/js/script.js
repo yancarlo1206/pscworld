@@ -557,7 +557,7 @@
 			}
             
             $.ajax({
-                url:"http://localhost/pscworld/login/iniciar/",
+                url: BASE.url+"login/iniciar/",
                 // url:"http://siaweb.ufps.edu.co/proyectos/pscworld/login/iniciar",
 				method:"POST",
                 data: $(form).serialize(),

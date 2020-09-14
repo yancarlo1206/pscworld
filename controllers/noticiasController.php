@@ -9,7 +9,7 @@ class noticiasController extends Controller {
     public function index() {
         // $this->_view->noticias = $this->_noticia->resultList();
         $this->_view->noticias = $this->_noticia->dql("select n from Entities\Noticias n order by n.id desc",array());
-    	$this->_view->titulo = '';
+    	  $this->_view->titulo = '';
         $this->_view->renderizar('index', 'noticias');
     }
 
@@ -21,12 +21,18 @@ class noticiasController extends Controller {
     }
 
     public function listar() {
+        if(Session::get('autenticado')){
+            $this->redireccionar();
+        }
         $this->_view->noticias = $this->_noticia->resultList();
         $this->_view->titulo = '';
         $this->_view->renderizar('listar', 'noticias', 'listar_noticia');
     }
 
     public function registrar() {
+        if(!Session::get('autenticado')){
+            $this->redireccionar();
+        }
         if($this->getInt('guardar')){
             $this->_noticia->getInstance()->setTitulo($this->getTexto('titulo'));
             $this->_noticia->getInstance()->setContenido($this->getPostParam('editor1'));
@@ -63,6 +69,9 @@ class noticiasController extends Controller {
     }
 
     public function editar($noticia=null){
+       if(!Session::get('autenticado')){
+            $this->redireccionar();
+        }
         $this->_view->noticia = $this->_noticia->get($noticia);
         if($this->getInt('guardar')){
             $this->_noticia->getInstance()->setTitulo($this->getTexto('titulo'));
@@ -92,6 +101,9 @@ class noticiasController extends Controller {
     }
 
     public function eliminar($noticia=null){
+        if(!Session::get('autenticado')){
+            $this->redireccionar();
+        }
         $this->_noticia->get($noticia);
         try {
             $this->_noticia->delete();

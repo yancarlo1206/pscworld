@@ -6,12 +6,18 @@ class bannerController extends Controller {
     }
 
     public function index() {
+      if(!Session::get('autenticado')){
+          $this->redireccionar();
+      }
       $this->_view->banners = $this->_banner->resultList();
     	$this->_view->titulo = '';
       $this->_view->renderizar('index');
     }
 
     public function registrar() {
+        if(!Session::get('autenticado')){
+            $this->redireccionar();
+        }
         if($this->getInt('guardar')){
             $this->_banner->getInstance()->setTitulo($this->getTexto('titulo'));
             $this->_banner->getInstance()->setUrl($this->getPostParam('url'));
@@ -43,6 +49,9 @@ class bannerController extends Controller {
     }
 
     public function editar($banner=null){
+        if(!Session::get('autenticado')){
+            $this->redireccionar();
+        }
         $this->_view->banner = $this->_banner->get($banner);
         if($this->getInt('guardar')){
             $this->_banner->getInstance()->setTitulo($this->getTexto('titulo'));
