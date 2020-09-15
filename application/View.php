@@ -72,7 +72,7 @@ class View {
                             array(
                                 array(
                                     'id' => 'certificado_correo_ac_der',
-                                    'titulo' => 'Certificado digital de la Autoridad Certificadora de correo confiable',
+                                    'titulo' => 'Consulte su certificado de correo confiable',
                                     'enlace' => BASE_URL . 'public/certificados/correo/ac.der'
                                 ),
                                 array(
