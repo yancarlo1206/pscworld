@@ -168,7 +168,7 @@ class View {
         if(Session::get('autenticado')){
             $menu[] = array(
                 'id' => 'noticias',
-                'titulo' => 'Noticias',
+                'titulo' => 'Blog',
                 'enlace' => BASE_URL . 'noticias/',
                 'submenu' => 
                     array(

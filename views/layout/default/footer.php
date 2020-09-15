@@ -13,8 +13,8 @@
                                         <ul class="list">
                                             <li style="padding-bottom: 20px"><a style="font-weight: bold;" href="<?php echo BASE_URL; ?>/public/docs/PolíticadeCertificados.pdf" target="_blank">Políticas del servicio</a></li>
                                             <li style="padding-bottom: 20px; margin-left: 15px"><i class="flaticon-right-arrow ico-right-footer"></i>Emisión de certificados digitales de Firma Electrónica Avanzada</li>
-                                            <li style="padding-bottom: 20px; margin-left: 15px"><i class="flaticon-right-arrow ico-right-footer"></i>Emisión de constancias de conservación de mensajes de datos</li>
-                                            <li style="padding-bottom: 20px; margin-left: 15px"><i class="flaticon-right-arrow ico-right-footer"></i>Emisión de sellos digitales de tiempo</li>
+                                            <!--<li style="padding-bottom: 20px; margin-left: 15px"><i class="flaticon-right-arrow ico-right-footer"></i>Emisión de constancias de conservación de mensajes de datos</li>
+                                            <li style="padding-bottom: 20px; margin-left: 15px"><i class="flaticon-right-arrow ico-right-footer"></i>Emisión de sellos digitales de tiempo</li>-->
                                         </ul>
                                     </div>
                                 </div>
@@ -27,8 +27,8 @@
                                         <ul class="list">
                                             <li style="padding-bottom: 20px"><a style="font-weight: bold;" href="<?php echo BASE_URL; ?>/public/docs/DeclaracióndePrácticasdeCertificaciónv3.pdf" target="_blank">Declaración de Practicas del servicio</a></li>
                                             <li style="padding-bottom: 20px; margin-left: 15px"><i class="flaticon-right-arrow ico-right-footer"></i>Emisión de certificados digitales de Firma Electrónica Avanzada</li>
-                                            <li style="padding-bottom: 20px; margin-left: 15px"><i class="flaticon-right-arrow ico-right-footer"></i>Emisión de constancias de conservación de mensajes de datos</li>
-                                            <li style="padding-bottom: 20px; margin-left: 15px"><i class="flaticon-right-arrow ico-right-footer"></i>Emisión de sellos digitales de tiempo</li>
+                                            <!--<li style="padding-bottom: 20px; margin-left: 15px"><i class="flaticon-right-arrow ico-right-footer"></i>Emisión de constancias de conservación de mensajes de datos</li>
+                                            <li style="padding-bottom: 20px; margin-left: 15px"><i class="flaticon-right-arrow ico-right-footer"></i>Emisión de sellos digitales de tiempo</li>-->
                                         </ul>
                                     </div>
                                 </div>
