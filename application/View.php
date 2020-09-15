@@ -20,54 +20,113 @@ class View {
         $menu = array();
 
         // $menu[] = array(
-        //         'id' => 'inicio',
-        //         'titulo' => 'Inicio',
-        //         'enlace' => BASE_URL
+        //         'id' => 'servicios',
+        //         'titulo' => 'Certificados Digitales',
+        //         'enlace' => BASE_URL . 'servicios/',
+        //         'submenu' => 
+        //             array(
+        //                 array(
+        //                     'id' => 'certificado_nivel_psc',
+        //                     'titulo' => 'Certificados Nivel PSC',
+        //                     'enlace' => BASE_URL . 'servicios/certificado_nivel_psc/'
+        //                 ),
+        //                 // array(
+        //                 //     'id' => 'estampado_tiempo',
+        //                 //     'titulo' => 'Estampado de Tiempo',
+        //                 //     'enlace' => BASE_URL . 'servicios/estampado_tiempo/'
+        //                 // ),
+        //                 array(
+        //                     'id' => 'certificado_ssl',
+        //                     'titulo' => 'Certificados SSL',
+        //                     'enlace' => BASE_URL . 'servicios/certificado_ssl/'
+        //                 )
+        //                 // array(
+        //                 //     'id' => 'nom_151',
+        //                 //     'titulo' => 'Nom 151',
+        //                 //     'enlace' => BASE_URL . 'servicios/nom_151/'
+        //                 // )
+        //             )
         //         );
+
         $menu[] = array(
-                'id' => 'servicios',
-                'titulo' => 'Certificados Digitales',
-                'enlace' => BASE_URL . 'servicios/',
-                'submenu' => 
+            'id' => 'servicios',
+            'titulo' => 'Certificados Digitales',
+            'enlace' => BASE_URL . 'servicios/',
+            'submenu' =>
+                array(
                     array(
-                        array(
-                            'id' => 'certificado_nivel_psc',
-                            'titulo' => 'Certificados Nivel PSC',
-                            'enlace' => BASE_URL . 'servicios/certificado_nivel_psc/'
-                        ),
-                        // array(
-                        //     'id' => 'estampado_tiempo',
-                        //     'titulo' => 'Estampado de Tiempo',
-                        //     'enlace' => BASE_URL . 'servicios/estampado_tiempo/'
-                        // ),
-                        array(
-                            'id' => 'certificado_ssl',
-                            'titulo' => 'Certificados SSL',
-                            'enlace' => BASE_URL . 'servicios/certificado_ssl/'
-                        )
-                        // array(
-                        //     'id' => 'nom_151',
-                        //     'titulo' => 'Nom 151',
-                        //     'enlace' => BASE_URL . 'servicios/nom_151/'
-                        // )
+                        'id' => 'certificado_nivel_psc',
+                        'titulo' => 'Certificados PSC',
+                        'enlace' => BASE_URL . 'servicios/certificado_nivel_psc/'
+                        
+                    ),
+                    array(
+                        'id' => 'certificado_ssl',
+                        'titulo' => 'Certificados SSL',
+                        'enlace' => BASE_URL . 'servicios/certificado_ssl/'
+                    ),
+                    array(
+                        'id' => 'consulta_certificado',
+                        'titulo' => 'Consulta de Certificados',
+                        'submenutres' =>
+                            array(
+                                array(
+                                    'id' => 'certificado_correo_ac_der',
+                                    'titulo' => 'Certificado digital de la Autoridad Certificadora de correo confiable',
+                                    'enlace' => BASE_URL . 'public/certificados/correo/ac.der'
+                                ),
+                                array(
+                                    'id' => 'certificado_valor_legal',
+                                    'titulo' => 'Certificado con valor legal',
+                                    'enlace' => 'http://pscworld.com/primero.html'
+                                ),
+                                array(
+                                    'id' => 'certificado_digital_valor_legal',
+                                    'titulo' => 'Certificados digitales con valor legal',
+                                    'enlace' => 'https://consultacerts.pscworld.com/'
+                                ),
+                                array(
+                                    'id' => 'lista_certificado_revocados',
+                                    'titulo' => 'Lista de certificados revocados con valor legal (CRL)',
+                                    'enlace' => 'https://pscworld.com/scripts/seguriserver/instalarcertificado/CGI_GET_CERT.exe/GETCRL)'
+                                ),
+                                array(
+                                    'id' => 'certificado_digital_autoridad',
+                                    'titulo' => 'Certificado digital de la Autoridad Certificadora con valor legal',
+                                    'enlace' => BASE_URL . 'public/certificados/pscworld/ac.der'
+                                ),
+                                array(
+                                    'id' => 'instalacion_certificados',
+                                    'titulo' => 'Instalación de certificados digitales con valor legal',
+                                    'enlace' => 'https://pscworld.com/scripts/seguriserver/instalarcertificado/CGI_GET_CERT.exe/SHOW'
+                                ),
+                                array(
+                                    'id' => 'certificado_ac_pscworld',
+                                    'titulo' => 'Certificado de la AC PSC World',
+                                    'enlace' => BASE_URL . 'public/certificados/pscworld/ac.der'
+                                ),
+                                array(
+                                    'id' => 'certificado_ac_mexico',
+                                    'titulo' => 'Certificado de la AC de México',
+                                    'enlace' => BASE_URL . 'public/certificados/certmexico/ac.der'
+                                )
+                            )
                     )
-                );
+                )
+            );
+
         $menu[] = array(
             'id' => 'nom_151',
             'titulo' => 'NOM-151',
             'enlace' => BASE_URL . 'servicios/nom_151/'
             );
+        
         $menu[] = array(
             'id' => 'estampado_tiempo',
             'titulo' => 'Time Stamp',
             'enlace' => BASE_URL . 'servicios/estampado_tiempo/'
-            );
-        // $menu[] = array(
-        //         'id' => 'doc2sign',
-        //         'titulo' => 'doc2sign',
-        //         'enlace' => BASE_URL . 'doc2sign/'
-        //         );
-            
+            );        
+        
         $menu[] = array(
             'id' => 'servicios_firmas',
             'titulo' => 'Firma Digital',
@@ -78,42 +137,31 @@ class View {
                         'id' => 'doc2sign',
                         'titulo' => 'doc2sign',
                         'enlace' => BASE_URL . 'doc2sign/'
-                        // ,
-                        // 'submenutres' =>
-                        //     array(
-                        //         array(
-                        //             'id' => 'contratos',
-                        //             'titulo' => 'Contratos',
-                        //             'enlace' => BASE_URL . 'doc2sign/'
-                        //         ),
-                        //         array(
-                        //             'id' => 'avaluos',
-                        //             'titulo' => 'Avaluos',
-                        //             'enlace' => BASE_URL . 'doc2sign/'
-                        //         ),
-                        //         array(
-                        //             'id' => 'nomina',
-                        //             'titulo' => 'Nomina',
-                        //             'enlace' => BASE_URL . 'doc2sign/'
-                        //         )
-                        //     )
+                        ,
+                        'submenutres' =>
+                            array(
+                                array(
+                                    'id' => 'contratos',
+                                    'titulo' => 'Contratos',
+                                    'enlace' => BASE_URL . 'doc2sign/'
+                                ),
+                                array(
+                                    'id' => 'avaluos',
+                                    'titulo' => 'Avaluos',
+                                    'enlace' => BASE_URL . 'doc2sign/'
+                                ),
+                                array(
+                                    'id' => 'nomina',
+                                    'titulo' => 'Nomina',
+                                    'enlace' => BASE_URL . 'doc2sign/'
+                                )
+                            )
                     ),
                     array(
                         'id' => 'au2sign',
                         'titulo' => 'autosign',
                         'enlace' => BASE_URL . 'au2sign/'
                     )
-                    // ,
-                    // array(
-                    //     'id' => 'certificado_ssl',
-                    //     'titulo' => 'Certificados SSL',
-                    //     'enlace' => BASE_URL . 'servicios/certificado_ssl/'
-                    // ),
-                    // array(
-                    //     'id' => 'nom_151',
-                    //     'titulo' => 'Nom 151',
-                    //     'enlace' => BASE_URL . 'servicios/nom_151/'
-                    // )
                 )
             );
 
