@@ -72,12 +72,16 @@
                                                         <?php if(isset($value_sub['submenutres'])){ ?>
                                                             <ul>  
                                                             <?php foreach ($value_sub['submenutres'] as $key_tres => $value_tres) { ?>
+                                                                <?php $target=''; ?>
                                                                 <?php $currentSubTres = ''; ?>
                                                                 <?php if($_layoutParams['subItem'] == $value_tres['id']){
                                                                     $currentSubTres = 'current';
                                                                 } ?>
+                                                                <?php if($value_sub['id'] == 'consulta_certificado'){
+                                                                    $target = 'target="_blank"';
+                                                                } ?>
                                                                 <li class='<?php echo $currentSubTres; ?>'>
-                                                                    <a href="<?php echo $value_tres['enlace']; ?>">
+                                                                    <a href="<?php echo $value_tres['enlace']; ?>" <?php echo $target ?> >
                                                                         <?php echo $value_tres['titulo']; ?>
                                                                     </a>
                                                                 </li>   
