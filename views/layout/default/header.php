@@ -81,7 +81,7 @@
                                                                     $target = 'target="_blank"';
                                                                 } ?>
                                                                 <li class='<?php echo $currentSubTres; ?>'>
-                                                                    <a href="<?php echo $value_tres['enlace']; ?>" <?php echo $target ?> >
+                                                                    <a href="<?php echo $value_tres['enlace']; ?>" <?php echo $target; ?> >
                                                                         <?php echo $value_tres['titulo']; ?>
                                                                     </a>
                                                                 </li>   
