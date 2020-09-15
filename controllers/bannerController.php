@@ -10,7 +10,7 @@ class bannerController extends Controller {
           $this->redireccionar();
       }
       $this->_view->banners = $this->_banner->resultList();
-    	$this->_view->titulo = '';
+    	$this->_view->titulo = 'Listar Banner';
       $this->_view->renderizar('index');
     }
 
@@ -44,7 +44,7 @@ class bannerController extends Controller {
                 echo $e;                
             }
         }
-        $this->_view->titulo = '';
+        $this->_view->titulo = 'Registrar Banner';
         $this->_view->renderizar('registrar');
     }
 
@@ -76,7 +76,7 @@ class bannerController extends Controller {
                 echo $e;                
             }
         }
-        $this->_view->titulo = '';
+        $this->_view->titulo = 'Editar Banner';
         $this->_view->renderizar('registrar', 'banners', 'editar_banner');
     }
 }

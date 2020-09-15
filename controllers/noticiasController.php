@@ -9,14 +9,14 @@ class noticiasController extends Controller {
     public function index() {
         // $this->_view->noticias = $this->_noticia->resultList();
         $this->_view->noticias = $this->_noticia->dql("select n from Entities\Noticias n order by n.id desc",array());
-    	  $this->_view->titulo = '';
+    	  $this->_view->titulo = 'Noticias';
         $this->_view->renderizar('index', 'noticias');
     }
 
     public function ver_noticia($noticia=null) {
       $this->_view->noticia = $this->_noticia->get($noticia);
       $this->_view->noticias = $this->_noticia->dql("select n from Entities\Noticias n order by n.id desc",array());
-    	$this->_view->titulo = '';
+    	$this->_view->titulo = 'Ver Noticia';
       $this->_view->renderizar('ver_noticia', 'noticias');
     }
 
@@ -25,7 +25,7 @@ class noticiasController extends Controller {
             $this->redireccionar();
         }
         $this->_view->noticias = $this->_noticia->resultList();
-        $this->_view->titulo = '';
+        $this->_view->titulo = 'Listar Noticias';
         $this->_view->renderizar('listar', 'noticias', 'listar_noticia');
     }
 
@@ -64,7 +64,7 @@ class noticiasController extends Controller {
                 echo $e;                
             }
         }
-        $this->_view->titulo = '';
+        $this->_view->titulo = 'Registrar Noticias';
         $this->_view->renderizar('registrar', 'noticias', 'registrar_noticia');
     }
 
@@ -96,7 +96,7 @@ class noticiasController extends Controller {
                 echo $e;                
             }
         }
-        $this->_view->titulo = '';
+        $this->_view->titulo = 'Editar Noticias';
         $this->_view->renderizar('registrar', 'noticias', 'registrar_noticia');
     }
 

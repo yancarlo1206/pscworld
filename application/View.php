@@ -67,7 +67,8 @@ class View {
                     ),
                     array(
                         'id' => 'consulta_certificado',
-                        'titulo' => 'Consulta de Certificados',
+                        'titulo' => 'Consulta Certificados',
+                        'enlace' => BASE_URL ,
                         'submenutres' =>
                             array(
                                 array(
@@ -137,8 +138,7 @@ class View {
                         'id' => 'doc2sign',
                         'titulo' => 'doc2sign',
                         'enlace' => BASE_URL . 'doc2sign/'
-                        ,
-                        'submenutres' =>
+                        /*'submenutres' =>
                             array(
                                 array(
                                     'id' => 'contratos',
@@ -155,7 +155,7 @@ class View {
                                     'titulo' => 'Nomina',
                                     'enlace' => BASE_URL . 'doc2sign/'
                                 )
-                            )
+                            )*/
                     ),
                     array(
                         'id' => 'au2sign',

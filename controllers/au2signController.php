@@ -6,7 +6,7 @@ class au2signController extends Controller {
     }
     
     public function index() {
-    	$this->_view->titulo = '';
+    	$this->_view->titulo = 'Au2sign';
         $this->_view->renderizar('index', 'servicios_firmas');
     }
 

@@ -6,7 +6,7 @@ class contactoController extends Controller {
     }
     
     public function index() {
-    	$this->_view->titulo = '';
+    	$this->_view->titulo = 'Contacto';
         $this->_view->renderizar('index', 'contacto');
     }
 

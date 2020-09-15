@@ -6,7 +6,7 @@ class serviciosController extends Controller {
     }
     
     public function index() {
-    	$this->_view->titulo = '';
+    	$this->_view->titulo = 'Certificados Digitales';
         $this->_view->renderizar('index', 'servicios');
     }    
 
@@ -26,7 +26,7 @@ class serviciosController extends Controller {
     }
 
     public function certificado_nivel_psc(){
-        $this->_view->titulo = 'Nom 151';
+        $this->_view->titulo = 'Certificados PSC';
         $this->_view->renderizar('certificado_nivel_psc', 'servicios', 'certificado_nivel_psc');
     }
 
