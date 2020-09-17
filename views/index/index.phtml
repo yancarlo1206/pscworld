@@ -307,13 +307,13 @@
     <!-- Form Container -->
     <div class="form-container">
         <div class="auto-container">
-            <form class="form-style-one">
+            <form class="form-style-one" action="<?php echo BASE_URL ?>contacto/enviarHome/" method="post">
                 <div class="row">
                     <div class="form-group col-lg-4 col-md-6 col-sm-12">
                         <label>Nombre <sup>*</sup></label>
                         <div class="input-group">
                             <span class="icon fa fa-user"></span>
-                            <input type="text" name="firstname" placeholder="Juan" required="">
+                            <input type="text" name="nombre" placeholder="Juan" required="">
                         </div>
                     </div>
 
@@ -321,7 +321,7 @@
                         <label>Apellido <sup>*</sup></label>
                         <div class="input-group">
                             <span class="icon fa fa-user"></span>
-                            <input type="text" name="lastname" placeholder="Hernández" required="">
+                            <input type="text" name="apellido" placeholder="Hernández" required="">
                         </div>
                     </div>
 
@@ -329,7 +329,7 @@
                         <label>Mensaje <sup>*</sup></label>
                         <div class="input-group">
                             <span class="icon fa fa-info"></span>
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                            <textarea name="mensaje" id="" cols="30" rows="10"></textarea>
                         </div>
                     </div>
 
@@ -337,7 +337,7 @@
                         <label>Número de teléfono <sup>*</sup></label>
                         <div class="input-group">
                             <span class="icon fa fa-phone-volume"></span>
-                            <input type="text" name="phone" placeholder="Numero completo" required="">
+                            <input type="text" name="telefono" placeholder="Numero completo" required="">
                         </div>
                     </div>
                     

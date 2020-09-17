@@ -18,17 +18,17 @@
                     </div>
 
                     <form action="#" method="post" id="email-form">
-                        <div class="row mid-spacing">
+                        <div class="row mid-spacing" action="<?php echo BASE_URL ?>contacto/enviar/" method="post">
                             <div class="form-group mb-0 col-lg-12">
                                 <div class="response"></div>
                             </div>
 
                             <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                                <input type="text" name="first_name" class="first_name" placeholder="Nombre" required="">
+                                <input type="text" name="nombre" class="first_name" placeholder="Nombre" required="">
                             </div>
 
                             <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                                <input type="text" name="last_name" class="last_name" placeholder="Apellido" required="">
+                                <input type="text" name="apellido" class="last_name" placeholder="Apellido" required="">
                             </div>
 
                             <div class="form-group col-lg-6 col-md-6 col-sm-12">
@@ -40,11 +40,11 @@
                             </div>
 
                             <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                                <input type="text" name="nomEmpresa" class="first_name" placeholder="Nombre de la empresa" required="">
+                                <input type="text" name="nombreEmpresa" class="first_name" placeholder="Nombre de la empresa" required="">
                             </div>
 
                             <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                                <input type="text" name="tamEmpresa" class="last_name" placeholder="Tamaño de la empresa" required="">
+                                <input type="text" name="tamanoEmpresa" class="last_name" placeholder="Tamaño de la empresa" required="">
                             </div>
 
                             <div class="form-group col-lg-12 col-md-6 col-sm-12">
@@ -52,7 +52,7 @@
                             </div>
                             
                             <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                                <textarea name="contact_message" placeholder="Mensaje"></textarea>
+                                <textarea name="mensaje" placeholder="Mensaje"></textarea>
                             </div>
                             
                             <div class="form-group col-lg-12 col-md-12 col-sm-12">

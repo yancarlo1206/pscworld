@@ -23,13 +23,14 @@ define('HASH_KEY', '4ebz7d533be89');
 	define('DB_HOST_LOCAL', false);	
 }*/
 //define('BASE_URL', 'https://wwwtest.pscworld.com/');
-define('BASE_URL', 'https://www.pscworld.com/');
+//define('BASE_URL', 'https://www.pscworld.com/');
 // define('BASE_URL', 'http://siaweb.ufps.edu.co/proyectos/pscworld');
+define('BASE_URL', 'http://localhost/pscworld/');
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
-define('DB_PASS', 'PscWorld20');
+define('DB_PASS', '');
 define('DB_NAME', 'pscworld_bd');
-define('DB_PORT', '3307');
+define('DB_PORT', '');
 define('DB_CHAR', 'utf8');
 
 ?>

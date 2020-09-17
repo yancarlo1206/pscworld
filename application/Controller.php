@@ -246,10 +246,10 @@ abstract class Controller {
   }
 
 
-  public function templateMail($text){
+  public function templateEmail($text){
     $rta='';
-    $rta.='<div style="width: 500px; margin: 0 auto;background-color: #fff;border: 1px solid #428bca;border-radius: 4px;-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);overflow: hidden;box-shadow: 0 1px 1px rgba(0,0,0,.05);font-family: \'Helvetica Neue\',Helvetica,Arial,sans-serif;font-size: 14px;line-height: 1.42857143;color: #333;">';
-    $rta.='<div style="border-bottom: 1px solid #ccc;margin: 0px;padding: 10px;text-align: center;background-color: #fff;color: #333;background-color: #007EB8;border-color: #e7e7e7;"><img style="height: 50px;max-height: 50px;" height="50" src="'.BASE_URL.'public/img/logo.png" alt="Logo"></div>';
+    $rta.='<div style="width: 500px; margin: 0 auto;background-color: #fff;border: 1px solid #2c2f50;border-radius: 4px;-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);overflow: hidden;box-shadow: 0 1px 1px rgba(0,0,0,.05);font-family: \'Helvetica Neue\',Helvetica,Arial,sans-serif;font-size: 14px;line-height: 1.42857143;color: #333;">';
+    $rta.='<div style="border-bottom: 1px solid #ccc;margin: 0px;padding: 10px;text-align: center;background-color: #fff;color: #333;background-color: #2c2f50;border-color: #e7e7e7;"><img style="height: 50px;max-height: 50px;" height="50" src="'.BASE_URL.'public/images/logo.png" alt="Logo"></div>';
     $rta.='<div style="min-height: 150px;">';
     $rta.='<p style="font-family: \'Helvetica Neue\',Helvetica,Arial,sans-serif;font-size: 14px;line-height: 1.42857143;color: #333;padding: 20px 15px;margin: 0;text-align: justify;">';
 
@@ -265,27 +265,23 @@ abstract class Controller {
     return $rta;
   }
 
-  public function sendMail($de,$deNombre,$para,$paraNombre,$msj,$asunto="",$archvio=false) {
-    $this->getLibrary('class.phpmailer');
-    $mail = new PHPMailer();
-    $mail->CharSet = "UTF­8";
-    /*$mail->Encoding = "quoted­printable";*/
-    $mail->isHTML(true);
-    $mail->SetFrom($de, $deNombre);
-    $mail->AddAddress($para, $paraNombre);
-    $mail->Subject = $asunto;
-    $mail->MsgHTML($this->templateMail($msj)); 
-    if($archvio){
-      $varname = $archvio['name'];
-      $vartemp = $archvio['tmp_name'];
-      $mail->AddAttachment($vartemp, $varname);
-    }
-    if(!@$mail->Send()) {
-     return false;
-   }else{
-     return true;
-   }
-
+  public function enviarCorreo($destino='',$destinoNombre='',$asunto='',$msj='') {
+      $this->getLibrary("mail" . DS . "class.phpmailer");
+      $mail = new PHPMailer();
+      $mail->IsSMTP();
+      $mail->SMTPDebug = false;
+      $mail->SMTPAuth = true;
+      $mail->SMTPSecure = "ssl";
+      $mail->Host = "SMTP.gmail.com";
+      $mail->Port = 465;
+      $mail->IsHTML(true);
+      $mail->Username = "no_responder@unisimonbolivar.edu.co";
+      $mail->Password = "tzjhjmaiweaopytn";
+      $mail->SetFrom('no_responder@unisimonbolivar.edu.co', 'Universidad Simon Bolivar - Cucuta');
+      $mail->Subject = $asunto." - UNISIMON CUCUTA";
+      $mail->MsgHTML($this->templateEmail($msj));
+      $mail->AddAddress($destino,$destinoNombre);
+      if ($mail->Send()) { return true; } else { return false; }
   }
 
   function numberPad($number,$n = 6,$s = "0") {
