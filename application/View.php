@@ -136,7 +136,7 @@ class View {
                 array(
                     array(
                         'id' => 'doc2sign',
-                        'titulo' => 'doc2sign',
+                        'titulo' => 'doc2Sign',
                         'enlace' => BASE_URL . 'doc2sign/'
                         /*'submenutres' =>
                             array(
