@@ -71,15 +71,17 @@ class View {
                         'enlace' => BASE_URL ,
                         'submenutres' =>
                             array(
-                                array(
-                                    'id' => 'certificado_correo_ac_der',
-                                    'titulo' => 'Consulte su certificado de correo confiable',
-                                    'enlace' => BASE_URL . 'public/certificados/correo/ac.der'
-                                ),
+                                // array(
+                                //     'id' => 'certificado_correo_ac_der',
+                                //     'titulo' => 'Consulte su certificado de correo confiable',
+                                //     'enlace' => BASE_URL . 'public/certificados/correo/ac.der'
+                                // ), Ya no se vende
                                 array(
                                     'id' => 'certificado_valor_legal',
                                     'titulo' => 'Certificado con valor legal',
-                                    'enlace' => 'http://pscworld.com/primero.html'
+                                    // 'enlace' => 'http://pscworld.com/primero.html'
+                                    'enlace' => 'https://consultacerts.pscworld.com'
+                                    // El link fue reemplazado
                                 ),
                                 array(
                                     'id' => 'certificado_digital_valor_legal',
