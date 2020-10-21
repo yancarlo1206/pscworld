@@ -22,7 +22,7 @@ class contactoController extends Controller {
     	$asunto = "Información PSCWORLD";
     	$msj = $this->plantillaMsj($nombre, $apellido, $telefono, $estado, $nombreEmpresa, $tamanoEmpresa, $email, $mensaje);
     	$this->enviarCorreo($email, $nombre." ".$apellido ,$asunto, $msj);
-    	$this->redireccionar();
+    	echo "+ok";
     }
 
     private function plantillaMsj($nombre=null, $apellido=null, $telefono=null, $estado=null, $nombreEmpresa=null, $tamanoEmpresa=null, $email=null, $mensaje=null){

@@ -2089,6 +2089,32 @@ hr{
 	margin-bottom: 10px;
 }
 
+#contact-form .response{
+	position: relative;
+	text-align: center;
+}
+
+#contact-form .response .success{
+    background: #59ab66;
+    color: #ffffff;
+	padding: 0 10px;
+	margin-bottom: 10px;
+}
+
+#contact-form .response .failed{
+	background-color: #f74848;
+	color: #ffffff;
+	padding: 0 10px;
+	margin-bottom: 10px;
+}
+
+#contact-form .response .text-info{
+	background-color: #ffcd66;
+	color: #222222 !important;
+	padding: 0 10px;
+	margin-bottom: 10px;
+}
+
 /*** 
 
 ====================================================================

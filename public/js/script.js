@@ -540,7 +540,7 @@
 		$('.portfolio-asymetric .parallax-scroll').attr('data-parallax', '{"y":-30,"smoothness":50}');
 	}
 	
-	//Contact Form Validation
+	//Login Form Validation
 	if($('#email-form').length){
 		$('#submit').click(function(){
 			
@@ -574,6 +574,50 @@
 	                    location.reload();
                 	}else{
                 		$('#email-form .response').fadeIn().html('<div class="failed">Error de Usuario y Clave.</div>');	
+                	}
+                },
+                error:function(){
+                    $('#email-form .response').fadeIn().html(data);
+                }
+            });
+        });
+	}
+
+	//Contact Form Validation
+	if($('#contact-form').length){
+		$('#submit').click(function(){
+			
+            var o = new Object();
+            var form = '#contact-form';
+			
+			var first_name = $('#contact-form .first_name').val();
+			var last_name = $('#contact-form .last_name').val();
+			var last_name = $('#contact-form .phone').val();
+			var email = $('#contact-form .email').val();
+			if(first_name == '' || last_name == '' || email == '')
+			{
+				$('#contact-form .response').html('<div class="failed">Por favor, rellene los campos obligatorios.</div>');
+				return false;
+			}
+            
+            $.ajax({
+                url: BASE.url+"contacto/enviar/",
+                // url:"http://siaweb.ufps.edu.co/proyectos/pscworld/login/iniciar",
+				method:"POST",
+                data: $(form).serialize(),
+                beforeSend:function(){
+                    $('#contact-form .response').html('<div class="text-info"><img src="images/icons/preloader.gif"> Loading...</div>');
+                },
+                success:function(data){
+                	if(data === '+ok'){
+	                    $('form').trigger("reset");
+	                    $('#contact-form .response').fadeIn().html("Correcto Envio de Contacto");
+	                    setTimeout(function(){
+	                        $('#contact-form .response').fadeOut("slow");
+	                    }, 5000);
+	                    location.reload();
+                	}else{
+                		$('#contact-form .response').fadeIn().html('<div class="failed">Error en el Proceso.</div>');	
                 	}
                 },
                 error:function(){
